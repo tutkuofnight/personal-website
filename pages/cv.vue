@@ -1,6 +1,11 @@
 <script>
 export default {
   name: 'CvPage',
+  head(){
+    return {
+      title: "CV | Tutku Uçan"
+    }
+  }
 }
 </script>
 <template lang="pug">

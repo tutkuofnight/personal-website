@@ -1,29 +1,44 @@
 <script>
 export default {
   name: 'IndexPage',
-
+  data(){
+    return {
+      darkMode: true,
+      modalStatus: false
+    }
+  },
+  async asyncData({$content}){
+    const notepad = await $content('notepad').fetch()
+    return {notepad}
+  }
 }
 </script>
 
 <template lang="pug">
 .container.flex.align-center.direction-column.justify-center
+  Modal(v-if="modalStatus" @closeModal="modalStatus = $event" :notepad="notepad")
   main.flex.align-center
-    img.profile-image(src="@/static/img/me-long.jpeg")
+    .profile-image-section
+      .image-content
+        img.profile-image(src="@/static/img/me-long.jpeg")
+      .context
+        i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
+        i.bx.bx-food-menu(@click="modalStatus = true")
     .content
       h1 Merhaba, Ben Tutku!
-      p Kişisel websiteme hoşgeldin. Burada yapmak istediğim şeyler; Üzerinde uzun uzun araştırma yaptığım konuları ve ilgi alanlarımı sizlerle paylaşmak,  Günlük olarak yaptığım işlerden bahsetmek ve en önemlisi yazılım alanında kendi gelişimimi bu websitesini geliştirerek ve yaptığım diğer projeleri sizlere tanıtarak göstermek.
+      p Kişisel websiteme hoşgeldin. Burada yapmak istediğim şeyler; Üzerinde uzun uzun araştırma yaptığım konuları ve ilgi alanlarımı sizlerle paylaşmak, günlük olarak yaptığım işlerden bahsetmek ve en önemlisi yazılım alanında kendi gelişimimi bu websitesini geliştirerek ve yaptığım diğer projeleri sizlere tanıtarak göstermek.
       .links
         NuxtLink(to="blog") /blog
         NuxtLink(to="cv") /cv
   footer.flex.align-center.justify-center
     a(href="https://www.linkedin.com/in/tutku-u%C3%A7an-610170195/" target="_blank")
-      i.fa-brands.fa-linkedin
+      i.bx.bxl-linkedin-square
     a(href="https://github.com/tutklon" target="_blank")
-      i.fa-brands.fa-github
+      i.bx.bxl-github
     a(href="https://twitter.com/tutklon" target="_blank")
-      i.fa-brands.fa-twitter
+      i.bx.bxl-twitter
     a(href="https://www.instagram.com/tutklon/" target="_blank")
-      i.fa-brands.fa-instagram
+      i.bx.bxl-instagram
 </template>
 
 <style lang="scss" scoped>
@@ -32,18 +47,43 @@ export default {
   height: 100vh;
 }
 main {
-  .profile-image {
+  .profile-image-section {
+    display: grid;
+    grid-template-rows: 14% auto 14%;
+    height: 100%;
     width: 270px;
-    max-height: 399px;
-    border-radius: $borderRadius;
     position: relative;
     z-index: 2;
     transform: translateX(20%);
+    .profile-image {
+      width: 270px;
+      max-height: 399px;
+      border-radius: $borderRadius;
+    }
+    .image-content {
+      grid-row: 2 / 3;
+      justify-self: center;
+      align-self: center;
+    }
+    .context {
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: center;
+      i {
+        cursor: pointer;
+        font-size: 25px;
+        color: lightgray;
+        padding: 5px;
+        &:hover {
+          color: white;
+        }
+      }
+    }
   }
   .content {
-    background: #323232;
+    background: $contentColorDark;
     border-radius: $borderRadius;
-    padding: 60px 100px;
+    padding: 100px 100px;
     h1 {
       font-size: 2.5em;
       color: $themeColor;
@@ -95,9 +135,16 @@ footer {
   i {
     cursor: pointer;
     color: lightgray;
-    font-size: 30px;
+    font-size: 35px;
     &:hover {
       color: white;
+    }
+  }
+}
+@media screen and (max-width: 1250px){
+  main {
+    .content {
+      padding: 60px 100px;
     }
   }
 }

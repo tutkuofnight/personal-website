@@ -15,7 +15,8 @@ export default {
 <template lang="pug">
 .blog-content
   .flex.align-center
-    button(@click="$router.push('/blog')") Geri
+    button.close(@click="$router.push('/blog')")
+      i.bx.bx-chevron-left.icon-btn
     h1 {{ctx.title}}
   nuxt-content(:document="ctx")
 </template>
@@ -27,6 +28,23 @@ export default {
   h1 {
     font-size: 3em;
     color: rgb(93, 168, 234);
+  }
+  .close {
+    background: none;
+    border: none;
+    i {
+      transition: 300ms all;
+      border: 2px solid transparent;
+      margin-top: 5px;
+      color: white;
+      font-size: 50px;
+      &:hover {
+        transform: translateX(-5px);
+      }
+      &:active {
+        transform: scale(1.1) translateX(-5px);
+      }
+    }
   }
 }
 </style>

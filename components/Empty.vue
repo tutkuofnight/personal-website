@@ -16,6 +16,7 @@ div {
   }
   h2 {
     color: lightgray;
+    text-align: center;
   }
   a {
     color: lightgray;

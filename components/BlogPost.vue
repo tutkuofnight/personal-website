@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <template lang="pug">
-  NuxtLink.blog-post(:to="post.path")
+  div.blog-post(@click="$router.push(post.path)")
     h2 {{post.title}}
     p {{post.desc}}
 </template>
@@ -18,16 +18,17 @@ export default {
 <style lang="scss" scoped>
 @import '../static/css/veriables';
 .blog-post {
-  background: $contentColorDark !important;
-  border-radius: $borderRadius;
-  color: white;
+  background: $contentColor;
+  // border-radius: $borderRadius;
+  border: 1px solid $textColor;
+  padding: 20px;
+  color: $textColor;
   text-decoration: none;
   cursor: pointer;
-  width: 50%;
-  max-width: 50%;
+  width: 47%;
   transition: 300ms all;
   &:hover {
-    background: rgba($contentColorDark, 0.8);
+    box-shadow: $themeColor 4px 4px 0px 0px;
   }
 }
 </style>

@@ -3,13 +3,34 @@ export default {
   name: 'IndexPage',
   data(){
     return {
-      darkMode: true,
+      darkMode: null,
       modalStatus: false
     }
   },
   async asyncData({$content}){
     const notepad = await $content('notepad').fetch()
     return {notepad}
+  },
+  watch: {
+    darkMode(val){
+      if(val === true){
+        document.body.classList.remove('light-mode')
+        document.body.classList.add('dark-mode')
+        localStorage.setItem('mode' , 'dark')
+      }
+      else {
+        document.body.classList.remove('dark-mode')
+        document.body.classList.add('light-mode')
+        localStorage.setItem('mode' , 'light')
+      }
+    }
+  },
+  beforeMount(){
+    const mode = localStorage.getItem('mode')
+    if(mode){
+      document.body.classList.add(mode + '-mode')
+      return mode == 'dark' ? this.mode = true : this.mode = false
+    }
   }
 }
 </script>
@@ -30,15 +51,7 @@ export default {
       .links
         NuxtLink(to="blog") /blog
         NuxtLink(to="cv") /cv
-  footer.flex.align-center.justify-center
-    a(href="https://www.linkedin.com/in/tutku-u%C3%A7an-610170195/" target="_blank")
-      i.bx.bxl-linkedin-square
-    a(href="https://github.com/tutklon" target="_blank")
-      i.bx.bxl-github
-    a(href="https://twitter.com/tutklon" target="_blank")
-      i.bx.bxl-twitter
-    a(href="https://www.instagram.com/tutklon/" target="_blank")
-      i.bx.bxl-instagram
+  Footer
 </template>
 
 <style lang="scss" scoped>
@@ -72,16 +85,18 @@ main {
       i {
         cursor: pointer;
         font-size: 25px;
-        color: lightgray;
+        color: $textColor;
         padding: 5px;
+        opacity: 0.7;
         &:hover {
-          color: white;
+          opacity: 1;
         }
+        padding: 5px;
       }
     }
   }
   .content {
-    background: $contentColorDark;
+    background: $contentColor;
     border-radius: $borderRadius;
     padding: 100px 100px;
     h1 {
@@ -97,10 +112,10 @@ main {
       display: flex;
       gap: 20px;
       a {
-        color: white;
+        color: $textColor;
         font-size: 1.5em;
         text-decoration: none;
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid $textColor;
         transition: 250ms all;
         padding-bottom: 2px;
         font-weight: 600;
@@ -112,39 +127,14 @@ main {
     }
   }
 }
-nav {
-  div {
-    gap: 10px;
-  }
-  a {
-    padding: 5px 10px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 2px;
-    &:hover , &.router-link-exact-active {
-      background: white;
-      color: black;
-    }
-  }
-}
-footer {
-  padding: 50px 0px;
-  gap:20px;
-  i {
-    cursor: pointer;
-    color: lightgray;
-    font-size: 35px;
-    &:hover {
-      color: white;
-    }
-  }
-}
+
 @media screen and (max-width: 1250px){
   main {
     .content {
       padding: 60px 100px;
+    }
+    .profile-image-section {
+      grid-template-rows: 10% auto 10%;
     }
   }
 }
@@ -165,14 +155,32 @@ footer {
     .profile-image {
       width: 200px;
       max-height: 309px;
-      transform: translateX(0%) translateY(15%);
     }
     .content {
       padding: 60px 50px;
+      text-align: center;
+      .links {
+        justify-content: center;
+      }
     }
-  }
-  footer {
-    padding: 40px 0px;
+    .profile-image-section {
+      width: 100%;
+      grid-template-columns: 25% 50% 25%;
+      grid-template-rows: 1fr;
+      transform: translateY(40px);
+      .image-content {
+        grid-column: 2 / 3;
+      }
+      .context {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        i {
+          font-size: 2em;
+        }
+      }
+    }
   }
   .container {
     height: auto;
@@ -181,6 +189,9 @@ footer {
 @media screen and (max-width: 550px) {
   main {
     margin-top: -50px;
+    .profile-image-section {
+      grid-template-columns: 20% 60% 20%;
+    }
   }
 }
 </style>

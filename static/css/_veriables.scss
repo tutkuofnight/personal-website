@@ -1,8 +1,19 @@
-$background-dark: #202020;
-$contentColorDark: #323232;
-$contentColorLight: whitesmoke;
-$background-light: white;
-$themeColor: #94BDED;
+@import 'colors';
+$backgroundColor: var(--backgroundColor);
+$contentColor: var(--contentColor);
+$textColor: var(--textColor);
+$themeColor: var(--themeColor);
 $icon-btn-sizes: ("small": 20px , "medium" : 40px , "large" : 50px);
 $borderRadiusSmall: 8px;
 $borderRadius: 18px;
+
+// .dark-mode {
+//   $backgroundColor: #202020;
+//   $textColor: #fafafa;
+// }
+// .light-mode {
+//   $backgroundColor: #fafafa;
+//   $contentColor: #f3f5f4;
+//   $textColor: black;
+//   $themeColor: #7cb1ee;
+// }

@@ -1,0 +1,18 @@
+:root {
+  --backgroundColor: #202020;
+  --textColor: #fafafa;
+  --contentColor: #323232;
+  --themeColor: #94BDED;
+}
+.dark-mode {
+  --backgroundColor: #202020;
+  --textColor: #fafafa;
+  --contentColor: #323232;
+  --themeColor: #94BDED;
+}
+.light-mode {
+  --backgroundColor: #f3f5f4;
+  --textColor: black;
+  --contentColor: white;
+  --themeColor: #5da5f7;
+}

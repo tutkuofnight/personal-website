@@ -6,6 +6,7 @@ div
 </template>
 
 <style lang="scss" scoped>
+@import '../static/css/veriables';
 div {
   display: flex;
   justify-content: center;
@@ -15,11 +16,11 @@ div {
     padding: 10px;
   }
   h2 {
-    color: lightgray;
+    color: $textColor;
     text-align: center;
   }
   a {
-    color: lightgray;
+    color: $textColor;
   }
 }
 </style>

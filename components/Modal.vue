@@ -19,14 +19,14 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: rgba($background-dark, 0.7);
+  background: rgba($backgroundColor, 0.7);
   display: grid;
   place-items: center;
   position: absolute;
   z-index: 10;
 }
 .modal {
-  background: $contentColorDark;
+  background: $contentColor;
   border-radius: $borderRadius;
   padding: 20px;
   width: 50%;
@@ -41,7 +41,7 @@ export default {
   font-size: 40px;
   cursor: pointer;
   &:hover {
-    background: #3a3a3a;
+    background: rgba($contentColor, 0.7);
   }
 }
 </style>

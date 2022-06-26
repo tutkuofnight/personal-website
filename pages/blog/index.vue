@@ -27,6 +27,10 @@ export default {
 header {
   gap: 10px;
   margin-bottom: 40px;
+  transform: translateX(-20px);
+  h1 {
+    font-size: 2.5em;
+  }
 }
 i {
   transition: 300ms all;

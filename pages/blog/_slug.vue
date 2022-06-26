@@ -14,7 +14,7 @@ export default {
 </script>
 <template lang="pug">
 .blog-content
-  .flex.align-center
+  .flex.align-center.transform
     button.close(@click="$router.push('/blog')")
       i.bx.bx-chevron-left.icon-btn
     h1 {{ctx.title}}
@@ -22,6 +22,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../../static/css/veriables';
+a {
+  color: $themeColor;
+}
+.transform {
+  transform: translateX(-20px);
+}
 .blog-content {
   padding: 10px 200px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -35,8 +42,8 @@ export default {
     i {
       transition: 300ms all;
       border: 2px solid transparent;
-      margin-top: 5px;
-      color: white;
+      margin-top: 10px;
+      color: $textColor;
       font-size: 50px;
       &:hover {
         transform: translateX(-5px);

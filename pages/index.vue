@@ -3,7 +3,7 @@ export default {
   name: 'IndexPage',
   data(){
     return {
-      darkMode: null,
+      darkMode: true,
       modalStatus: false
     }
   },
@@ -16,22 +16,13 @@ export default {
       if(val === true){
         document.body.classList.remove('light-mode')
         document.body.classList.add('dark-mode')
-        localStorage.setItem('mode' , 'dark')
       }
       else {
         document.body.classList.remove('dark-mode')
         document.body.classList.add('light-mode')
-        localStorage.setItem('mode' , 'light')
       }
     }
   },
-  beforeMount(){
-    const mode = localStorage.getItem('mode')
-    if(mode){
-      document.body.classList.add(mode + '-mode')
-      return mode == 'dark' ? this.mode = true : this.mode = false
-    }
-  }
 }
 </script>
 
@@ -152,10 +143,6 @@ main {
 @media screen and (max-width: 800px){
   main {
     flex-direction: column;
-    .profile-image {
-      width: 200px;
-      max-height: 309px;
-    }
     .content {
       padding: 60px 50px;
       text-align: center;
@@ -168,6 +155,10 @@ main {
       grid-template-columns: 25% 50% 25%;
       grid-template-rows: 1fr;
       transform: translateY(40px);
+      .profile-image {
+        width: 200px;
+        max-height: 309px;
+      }
       .image-content {
         grid-column: 2 / 3;
       }

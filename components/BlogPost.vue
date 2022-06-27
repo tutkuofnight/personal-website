@@ -11,7 +11,7 @@ export default {
 </script>
 <template lang="pug">
   div.blog-post(@click="$router.push(post.path)")
-    h2 {{post.title}}
+    h1 {{post.title}}
     p {{post.desc}}
 </template>
 
@@ -25,8 +25,9 @@ export default {
   color: $textColor;
   text-decoration: none;
   cursor: pointer;
-  width: 47%;
+  width: 100%;
   transition: 300ms all;
+  font-size: 17px;
   &:hover {
     box-shadow: $themeColor 4px 4px 0px 0px;
   }

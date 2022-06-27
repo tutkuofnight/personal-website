@@ -14,9 +14,8 @@ export default {
 }
 </script>
 <template lang="pug">
-.container
+main
   header.flex.align-center
-    i.bx.bx-chevron-left.icon-btn.large(@click="$router.push('/')")
     h1 İçerikler
   div(v-for="post in posts")
     BlogPost(:post="post")
@@ -24,10 +23,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+main {
+  width: 70%;
+  margin: 0 auto;
+  div {
+    width: 95%;
+  }
+}
 header {
   gap: 10px;
   margin-bottom: 40px;
-  transform: translateX(-20px);
   h1 {
     font-size: 2.5em;
   }

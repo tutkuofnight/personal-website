@@ -30,7 +30,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['@nuxtjs/color-mode'],
   loading: {color: '#94BDED'},
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

@@ -2,7 +2,6 @@
 div
   img(src="@/static/img/ichigo.gif")
   h2 Sanırım Şu anda buralar biraz ıssız..
-  NuxtLink(to="/") Geri dönelim
 </template>
 
 <style lang="scss" scoped>

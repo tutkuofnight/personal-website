@@ -13,7 +13,9 @@
 <style lang="scss" scoped>
 @import '../static/css/veriables';
 footer {
-  padding: 50px 0px;
+  position: absolute;
+  bottom: 0;
+  padding: 40px 0px;
   gap:20px;
   i {
     cursor: pointer;
@@ -28,6 +30,7 @@ footer {
 @media screen and (max-width: 800px){
   footer {
     padding: 40px 0px;
+    position: static;
   }
 }
 </style>

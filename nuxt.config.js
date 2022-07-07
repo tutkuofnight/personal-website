@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'Tutku Uçan',
     htmlAttrs: {
-      lang: ['tr' , 'en'],
+      lang: ['tr' , 'en'], 
     },
     meta: [
       { charset: 'utf-8' },
@@ -30,7 +30,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/color-mode'],
+  buildModules: [],
   loading: {color: '#94BDED'},
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -40,11 +40,7 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
+    liveEdit: false
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

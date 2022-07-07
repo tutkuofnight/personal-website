@@ -15,19 +15,21 @@ export default {
 </script>
 <template lang="pug">
 main
-  header.flex.align-center
-    h1 İçerikler
-  div(v-for="post in posts")
-    BlogPost(:post="post")
+  div.content
+    header.flex.align-center
+      h1 İçerikler
+    div(v-for="post in posts")
+      BlogPost(:post="post")
     //- Empty
 </template>
 
 <style lang="scss" scoped>
 main {
-  width: 70%;
-  margin: 0 auto;
-  div {
-    width: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  & + .content {
+    width: 70%;
   }
 }
 header {

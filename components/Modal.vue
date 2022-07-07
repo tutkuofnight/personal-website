@@ -19,7 +19,7 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: rgba($backgroundColor, 0.7);
+  background: black;
   display: grid;
   place-items: center;
   position: absolute;

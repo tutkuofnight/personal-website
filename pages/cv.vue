@@ -5,13 +5,19 @@ export default {
     return {
       title: "CV | Tutku Uçan"
     }
+  },
+  async asyncData({$content}){
+    const cv = await $content('cv').fetch()
+    return {cv}
   }
 }
 </script>
 
 <template lang="pug">
 .container
-  Empty
+  div
+    nuxt-content(:document="cv" class="nuxt-content")
+  br
 </template>
 
 <style lang="scss" scoped>

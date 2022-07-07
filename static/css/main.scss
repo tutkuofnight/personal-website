@@ -3,7 +3,6 @@ body {
   position: absolute;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   background: $backgroundColor;
   color: $textColor;
   transition: 300ms all;
@@ -11,7 +10,7 @@ body {
 }
 .container {
   max-width: 70%;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 .icon-btn {
   cursor: pointer;
@@ -55,6 +54,12 @@ body {
 }
 .direction-column {
   flex-direction: column;
+}
+.nuxt-content {
+  font-size: 20px;
+  a {
+    color: aquamarine;
+  }
 }
 @media screen and (max-width: 1150px) {
   .container {

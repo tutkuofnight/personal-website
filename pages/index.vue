@@ -11,18 +11,6 @@ export default {
     const notepad = await $content('notepad').fetch()
     return {notepad}
   },
-  watch: {
-    darkMode(val){
-      if(val === true){
-        document.body.classList.remove('light-mode')
-        document.body.classList.add('dark-mode')
-      }
-      else {
-        document.body.classList.remove('dark-mode')
-        document.body.classList.add('light-mode')
-      }
-    }
-  },
 }
 </script>
 
@@ -34,15 +22,15 @@ export default {
       .image-content
         img.profile-image(src="@/static/img/me-long.jpeg")
       .context
-        i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
-        i.bx.bx-food-menu(@click="modalStatus = true")
+        //- i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
+        //- i.bx.bx-food-menu(@click="modalStatus = true")
     .content
       h1 Merhaba, Ben Tutku!
       p Kişisel websiteme hoşgeldin. Burada yapmak istediğim şeyler; Üzerinde uzun uzun araştırma yaptığım konuları ve ilgi alanlarımı sizlerle paylaşmak, günlük olarak yaptığım işlerden bahsetmek ve en önemlisi yazılım alanında kendi gelişimimi bu websitesini geliştirerek ve yaptığım diğer projeleri sizlere tanıtarak göstermek.
       .links
         NuxtLink(to="blog") /blog
         NuxtLink(to="cv") /cv
-  Footer
+  Footer(style="align-self: center")
 </template>
 
 <style lang="scss" scoped>
@@ -179,7 +167,6 @@ main {
 }
 @media screen and (max-width: 550px) {
   main {
-    margin-top: -50px;
     .profile-image-section {
       grid-template-columns: 20% 60% 20%;
     }

@@ -35,7 +35,7 @@ a {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   h1 {
     font-size: 2.5em;
-    color: rgb(93, 168, 234);
+    color: $themeColor;
   }
 }
 @media screen and (max-width: 590px) {

@@ -4,6 +4,8 @@
       i.bx.bxl-linkedin-square
     a(href="https://github.com/tutklon" target="_blank")
       i.bx.bxl-github
+    a(href="mailto:tutkuucan369@gmail.com" target="_blank")
+      i.bx.bx-envelope
     a(href="https://twitter.com/tutklon" target="_blank")
       i.bx.bxl-twitter
     a(href="https://www.instagram.com/tutklon/" target="_blank")

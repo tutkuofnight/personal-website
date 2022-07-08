@@ -1,8 +1,8 @@
 :root {
   --backgroundColor: #202020;
-  --textColor: #fafafa;
+  --textColor: whitesmoke;
   --contentColor: #323232;
-  --themeColor: aquamarine;
+  --themeColor: #00FFAB;
 }
 /* .dark-mode {
   --backgroundColor: #202020;

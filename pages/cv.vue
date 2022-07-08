@@ -16,10 +16,16 @@ export default {
 <template lang="pug">
 .container
   div
-    nuxt-content(:document="cv" class="nuxt-content")
+    br
+    br
+    nuxt-content(:document="cv")
   br
 </template>
 
 <style lang="scss" scoped>
-
+.container {
+  & + div {
+    margin-top: 30px;
+  }
+}
 </style>

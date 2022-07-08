@@ -28,3 +28,7 @@ Merhaba, Tutku Uçan 18 yaşında Bilişim Teknolojileri/Web Tasarım bölümün
 - Yüzme
 - Kamp 
 - Müzik
+<br>
+<center>
+  <img src="https://nextshark.com/wp-content/uploads/2018/01/007.gif" />
+</center>

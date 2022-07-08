@@ -97,7 +97,7 @@ main {
         border-bottom: 3px solid $textColor;
         transition: 250ms all;
         padding-bottom: 2px;
-        font-weight: 600;
+        font-weight: 500;
         &:hover {
           color: $themeColor;
           border-bottom: 3px solid $themeColor;

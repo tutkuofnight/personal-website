@@ -1,4 +1,5 @@
 <script>
+import {format} from 'date-fns'
 export default {
   name: 'BlogPost',
   props: {
@@ -6,30 +7,56 @@ export default {
       type: Object,
       required: true
     }
+  },
+  filters: {
+      formatDate(){
+        return format(new Date() , 'dd MM yyyy')
+      }
   }
 }
 </script>
 <template lang="pug">
-  div.blog-post(@click="$router.push(post.path)")
-    h1 {{post.title}}
-    p {{post.desc}}
+  nuxt-link.article-link(:to="post.path")
+    .article-content
+      h1 {{post.title}}
+      p {{post.updatedAt | formatDate}}
+    p.article-desc {{post.desc}}
 </template>
 
 <style lang="scss" scoped>
 @import '../static/css/veriables';
-.blog-post {
-  background: $contentColor;
-  // border-radius: $borderRadius;
-  border: 1px solid $textColor;
-  padding: 20px;
+.article-link {
+  width: 100%;
   color: $textColor;
   text-decoration: none;
-  cursor: pointer;
-  width: 100%;
-  transition: 300ms all;
-  font-size: 17px;
+  text-decoration-color: $themeColor;
+  -moz-text-decoration-color: $themeColor;
   &:hover {
-    box-shadow: $themeColor 4px 4px 0px 0px;
+    h1 {
+      text-decoration: $themeColor 4px underline;
+    }
+  }
+}
+.article-content {
+  display: flex;
+  align-items: center;
+  p {
+    margin-left: 20px;
+    color: lightgray;
+  }
+}
+.article-desc {
+  margin-top: 10px;
+  color: lightgray;
+}
+@media screen and (max-width: 800px){
+  .article-content {
+    display: block;
+    p {
+      margin-top: -10px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+    }
   }
 }
 </style>

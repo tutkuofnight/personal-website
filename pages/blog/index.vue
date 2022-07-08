@@ -15,28 +15,30 @@ export default {
 </script>
 <template lang="pug">
 main
-  div.content
-    header.flex.align-center
-      h1 İçerikler
-    div(v-for="post in posts")
-      BlogPost(:post="post")
+  header.flex.align-center
+    h1 /blog
+  div(v-for="post in posts" :key="post")
+    BlogPost(:post="post")
     //- Empty
 </template>
 
 <style lang="scss" scoped>
+@import '../../static/css/veriables';
 main {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  & + .content {
-    width: 70%;
-  }
+  flex-direction: column;
+  width: 70%;
+  margin: 20px auto;
 }
 header {
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   h1 {
     font-size: 2.5em;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    border-bottom: 4px solid $themeColor;
+    border-bottom-right-radius: 10px;
   }
 }
 i {

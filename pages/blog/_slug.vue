@@ -38,6 +38,11 @@ a {
     color: $themeColor;
   }
 }
+@media screen and (max-width: 800px){
+  .blog-content {
+    max-width: 85%;
+  }
+}
 @media screen and (max-width: 590px) {
   .blog-content {
     font-size: 20px;

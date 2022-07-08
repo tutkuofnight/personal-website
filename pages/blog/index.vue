@@ -57,4 +57,9 @@ i {
   height: 2px;
   background: gray;
 }
+@media screen and (max-width: 800px){
+  main {
+    width: 85%;
+  }
+}
 </style>

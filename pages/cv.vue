@@ -20,7 +20,6 @@ export default {
     br
     nuxt-content(:document="cv")
   br
-  Footer
 </template>
 
 <style lang="scss" scoped>

@@ -23,7 +23,7 @@ export default {
         img.profile-image(src="@/static/img/me-long.jpeg")
       .context
         //- i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
-        //- i.bx.bx-food-menu(@click="modalStatus = true")
+        i.bx.bx-food-menu(@click="modalStatus = true")
     .content
       h1 Merhaba, Ben Tutku!
       p Kişisel websiteme hoşgeldin. Burada yapmak istediğim şeyler; Üzerinde uzun uzun araştırma yaptığım konuları ve ilgi alanlarımı sizlerle paylaşmak, günlük olarak yaptığım işlerden bahsetmek ve en önemlisi yazılım alanında kendi gelişimimi bu websitesini geliştirerek ve yaptığım diğer projeleri sizlere tanıtarak göstermek.
@@ -41,7 +41,7 @@ export default {
 main {
   .profile-image-section {
     display: grid;
-    grid-template-rows: 14% auto 14%;
+    grid-template-rows: auto auto auto;
     height: 100%;
     width: 270px;
     position: relative;
@@ -60,7 +60,6 @@ main {
     .context {
       grid-row: 3 / 4;
       justify-self: center;
-      align-self: center;
       i {
         cursor: pointer;
         font-size: 25px;
@@ -155,6 +154,7 @@ main {
         grid-row: 2 / 3;
         display: flex;
         flex-direction: column;
+        align-self: center;
         i {
           font-size: 2em;
         }

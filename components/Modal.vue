@@ -18,8 +18,8 @@ export default {
 .background {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  background: black;
+  overflow: hidden !important;
+  background: rgba(black, 0.8);
   display: grid;
   place-items: center;
   position: absolute;

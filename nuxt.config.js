@@ -18,6 +18,12 @@ export default {
         href: 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css',
       },
     ],
+    script: [
+      {
+        src: './utils/gtm.js',
+        body: true
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

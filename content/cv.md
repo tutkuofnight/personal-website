@@ -12,7 +12,7 @@ Merhaba, Tutku Uçan 18 yaşında Bilişim Teknolojileri/Web Tasarım bölümün
 
 # İş Deneyimleri
 
-- Ünlü konuşmacı [Nahsan ŞİMŞEK](https://www.nahsansimsek.com/)'in girişimi [Direct Selling Expo](app.directsellingexpo.org) - Freelance
+- Ünlü konuşmacı [Nahsan ŞİMŞEK](https://www.nahsansimsek.com/)'in girişimi [Direct Selling Expo](https://app.directsellingexpo.org) - Freelance
 
 # Projeler
 

@@ -23,7 +23,7 @@ export default {
         img.profile-image(src="@/static/img/me-long.jpeg")
       .context
         //- i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
-        i.bx.bx-food-menu(@click="modalStatus = true")
+        //- i.bx.bx-food-menu(@click="modalStatus = true")
     .content
       h1 Merhaba, Ben Tutku!
       p Kişisel websiteme hoşgeldin. Burada yapmak istediğim şeyler; Üzerinde uzun uzun araştırma yaptığım konuları ve ilgi alanlarımı sizlerle paylaşmak, günlük olarak yaptığım işlerden bahsetmek ve en önemlisi yazılım alanında kendi gelişimimi bu websitesini geliştirerek ve yaptığım diğer projeleri sizlere tanıtarak göstermek.

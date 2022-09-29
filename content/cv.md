@@ -1,5 +1,6 @@
 # Ben Kimim?
-Merhaba, Tutku Uçan 18 yaşında Bilişim Teknolojileri/Web Tasarım bölümünden lise mezunu olmuş bir alaylı yazılım geliştiriciyim. Bilgisayar ve yazılıma kendimi bildim bileli meraklı ve gelecekte de bunu kendime meslek edinmek istiyordum fakat kendi kendime bir türlü başlayamadığımdan bir meslek lisesine gidip Bilişim Teknolojileri bölümünü seçmenin benim için güzel bir başlangıç olduğunu düşündüm ve öyle de oldu 🙂. Okulda öğrendiklerimle yetinmeyip hem yazılım hem de donanım alanında sürekli üzerine koyarak ilerledim ve okulumun son senesinde Teknik Serviste stajımı tamamladım. Liseden mezun olduğumda arkadaşımla birlikte İngiltere'de Türk kökenli bir şirketten ilk freelance işimizi alıp başarıyla tamamladık. Şu anda ise bir yandan üniversite okumayı düşünürken diğer bir yandan ise freelance işler kovalayıp kendi projelerimle de beraber CV'me katkı yapmaya çalışıyorum.
+Merhaba, Tutku Uçan 19 yaşında Bilişim Teknolojileri/Web Tasarım bölümünden lise mezunu olmuş bir alaylı yazılım geliştiriciyim. Bilgisayar ve yazılıma kendimi bildim bileli meraklı ve gelecekte de bunu kendime meslek edinmek istiyordum fakat kendi kendime bir türlü başlayamadığımdan bir meslek lisesine gidip Bilişim Teknolojileri bölümünü seçmenin benim için güzel bir başlangıç olduğunu düşündüm ve öyle de oldu 🙂. Okulda öğrendiklerimle yetinmeyip hem yazılım hem de donanım alanında sürekli üzerine koyarak ilerledim ve okulumun son senesinde Teknik Serviste stajımı tamamladım. Liseden mezun olduğumda arkadaşımla birlikte İngiltere'de Türk kökenli bir şirketten ilk freelance işimizi alıp başarıyla tamamladık. Şu anda ise Namık Kemal Üniversitesinde Bilgisayar Programcılığı Ön Lisans öğrencisi iken diğer bir yandan ise freelance/remote olarak çalışmaya devam ediyorum. 
+
 
 # Diller & Teknolojiler
 - HTML & CSS
@@ -13,6 +14,7 @@ Merhaba, Tutku Uçan 18 yaşında Bilişim Teknolojileri/Web Tasarım bölümün
 # İş Deneyimleri
 
 - Ünlü konuşmacı [Nahsan ŞİMŞEK](https://www.nahsansimsek.com/)'in girişimi [Direct Selling Expo](https://app.directsellingexpo.org) - Freelance
+- [Exxeble](https://exxeble.com/) - Remote
 
 # Projeler
 

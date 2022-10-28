@@ -42,8 +42,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/i18n'
   ],
+  // i18n: {
+  //   locales: ["en" , "tr"],
+  //   defaultLocale: "en",
+  //   vueI18n : {
+  //     messages: {
+  //       en: require('./locales/en.json'),
+  //       tr: require('./locales/tr.json')
+  //     }
+  //   }
 
+  // },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     liveEdit: false

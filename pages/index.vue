@@ -1,4 +1,5 @@
 <script>
+import {mapGetters} from 'vuex'
 export default {
   name: 'IndexPage',
   data(){
@@ -11,164 +12,128 @@ export default {
     const notepad = await $content('notepad').fetch()
     return {notepad}
   },
+  methods: {
+    ...mapGetters(['getDeveloperName'])
+  }
 }
 </script>
 
-<template lang="pug">
-.container.flex.align-center.direction-column.justify-center
-  Modal(v-if="modalStatus" @closeModal="modalStatus = $event" :notepad="notepad")
-  main.flex.align-center
-    .profile-image-section
-      .image-content
-        img.profile-image(src="@/static/img/me-long.jpeg")
-      .context
-        //- i.bx(:class="{'bx-moon' : darkMode , 'bx-sun' : !darkMode}" @click="darkMode = !darkMode")
-        //- i.bx.bx-food-menu(@click="modalStatus = true")
-    .content
-      h1 Merhaba, Ben Tutku!
-      p Kişisel websiteme hoşgeldin. Çoğu yazılımcının kendine ait bir websitesi vardır sanırım, Bu da benimki 😋. Bu websiteyi şuanda öğrenmekte olduğum Nuxt.js ile geliştiriyorum bu nedenle temel amacım kendimi tanıtmak ve websiteyi geliştirmeye devam etmek.
-      .links
-        NuxtLink(to="blog") /blog
-        NuxtLink(to="cv") /cv
-  Footer(style="align-self: center")
+<template>
+  <main>
+    <div class="content">
+      <div class="context">
+        <section>
+          <h1>Tutku Uçan</h1>
+          <small>Full-Stack Web Developer</small>
+        </section>
+        <section>
+          <nuxt-link class="direct-lnk" to="#blog">/blog</nuxt-link>
+          <nuxt-link class="direct-lnk" to="#cv">/cv</nuxt-link>
+        </section>
+        <Footer></Footer>
+      </div>
+    </div>
+    <div class="img-content">
+      <img src="/img/kyoraku.png" class="bg-img">
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
 @import '../static/css/veriables';
-.container {
-  height: 100vh;
-}
 main {
-  .profile-image-section {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    height: 100%;
-    width: 270px;
-    position: relative;
-    z-index: 2;
-    transform: translateX(20%);
-    .profile-image {
-      width: 270px;
-      max-height: 399px;
-      border-radius: $borderRadius;
-    }
-    .image-content {
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: center;
-    }
-    .context {
-      grid-row: 3 / 4;
-      justify-self: center;
-      i {
-        cursor: pointer;
-        font-size: 25px;
-        color: $textColor;
-        padding: 5px;
-        opacity: 0.7;
-        &:hover {
-          opacity: 1;
-        }
-        padding: 5px;
-      }
-    }
-  }
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  overflow: hidden;
   .content {
-    background: $contentColor;
-    border-radius: $borderRadius;
-    padding: 100px 100px;
-    h1 {
-      font-size: 2.5em;
-      color: $themeColor;
-      margin: 0;
-      padding-bottom: 10px;
-    }
-    p {
-      font-size: 1.5em;
-    }
-    .links {
-      display: flex;
-      gap: 20px;
-      a {
-        color: $textColor;
-        font-size: 1.5em;
-        text-decoration: none;
-        border-bottom: 3px solid $textColor;
-        transition: 250ms all;
-        padding-bottom: 2px;
-        font-weight: 500;
-        &:hover {
-          color: $themeColor;
-          border-bottom: 3px solid $themeColor;
+    background: rgba(#0000, $alpha: 0.9);
+    color: white;
+    box-shadow: rgba(#0000, $alpha: 0.9) 150px 0px 150px 150px;
+    display: grid;
+    place-items: center;
+    padding-left: 40px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 100vh;
+    margin-top: -15px;
+    .context {
+      section {
+        h1 {
+          font-size: 4em;
+          margin-bottom: 0px;
+        }
+        small {
+          font-size: 1.2em;
+        }
+        &:first-child {
+          border-bottom: 1px solid rgb(81, 81, 81);
+          padding: 15px;
+          background: -webkit-linear-gradient(50deg , #e8398b, #ff0f33);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:nth-child(2) {
+          margin-top: 20px;
+          & >* {
+            margin-right: 20px;
+          }
         }
       }
     }
   }
-}
-
-@media screen and (max-width: 1250px){
-  main {
-    .content {
-      padding: 60px 100px;
-    }
-    .profile-image-section {
-      grid-template-rows: 10% auto 10%;
-    }
+  .img-content {
+    position: relative;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: -1;
   }
 }
-@media screen and (max-width: 1024px) {
-  main {
-    .profile-image {
-      width: 250px;
-      max-height: 349px;
-    }
-    .content {
-      font-size: 15px;
-    }
+.bg-img {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.direct-lnk {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: 250ms all;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    color: #e8398b;
+    border-bottom: 2px solid #e8398b;
   }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1620px) {
+  .bg-img {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 1320px) {
   main {
-    flex-direction: column;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 820px) {
+  main {
+    grid-template-columns: 100%;
     .content {
-      padding: 60px 50px;
-      text-align: center;
-      .links {
-        justify-content: center;
-      }
-    }
-    .profile-image-section {
-      width: 100%;
-      grid-template-columns: 25% 50% 25%;
-      grid-template-rows: 1fr;
-      transform: translateY(40px);
-      .profile-image {
-        width: 200px;
-        max-height: 309px;
-      }
-      .image-content {
-        grid-column: 2 / 3;
-      }
-      .context {
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        i {
-          font-size: 2em;
+      padding-left: 0;
+      section {
+        &:first-child {
+          text-align: center;
+        }
+        &:nth-child(2) {
+          display: flex;
+          justify-content: center;
         }
       }
-    }
-  }
-  .container {
-    height: auto;
-  }
-}
-@media screen and (max-width: 550px) {
-  main {
-    .profile-image-section {
-      grid-template-columns: 20% 60% 20%;
+      // background: rgba(#0000, $alpha: 0.9);
     }
   }
 }

@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 @import '../static/css/veriables';
 main {
+  font-family: 'El Messiri' ,  sans-serif;
   width: 100%;
   height: 100vh;
   display: grid;

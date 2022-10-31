@@ -4,16 +4,36 @@ export default {
   name: 'IndexPage',
   data(){
     return {
-      darkMode: true,
-      modalStatus: false
+      // backgrounds: new Set({
+      //   1: "byakuya",
+      //   2: "kenpachi",
+      //   3: "kensei",
+      //   4: "komamura",
+      //   5: "kruotscuhi",
+      //   6: "otoribashi",
+      //   7: "shinji",
+      //   8: "soi-fon",
+      //   9: "toshiro",
+      //   10: "ukitake",
+      //   11: "unohana",
+      //   12: "yamamoto",
+      //   13: "kyoraku"
+      // })
     }
   },
-  async asyncData({$content}){
-    const notepad = await $content('notepad').fetch()
-    return {notepad}
-  },
+  // async asyncData(ctx){
+  //   if(!localStorage.getItem("bg-type")){
+  //     const res = await fetch('http://localhost:3000/api/bg-type')
+  //     localStorage.setItem("bg-type" , res.data)
+  //   }
+  // },
   methods: {
     ...mapGetters(['getDeveloperName'])
+  },
+  computed: {
+    // backgroundSetter(){
+    //   return "/img/backgrounds/" + this.backgrounds.valueOf(localStorage.getItem('bg-type') + ".png")
+    // }
   }
 }
 </script>
@@ -23,7 +43,7 @@ export default {
     <div class="content">
       <div class="context">
         <section>
-          <h1>Tutku Uçan</h1>
+          <h1>{{getDeveloperName()}}</h1>
           <small>Full-Stack Web Developer</small>
         </section>
         <section>
@@ -34,7 +54,7 @@ export default {
       </div>
     </div>
     <div class="img-content">
-      <img src="/img/kyoraku.png" class="bg-img">
+      <img src="/img/backgrounds/shinji.png" class="bg-img">
     </div>
   </main>
 </template>
@@ -42,7 +62,6 @@ export default {
 <style lang="scss" scoped>
 @import '../static/css/veriables';
 main {
-  font-family: 'El Messiri' ,  sans-serif;
   width: 100%;
   height: 100vh;
   display: grid;

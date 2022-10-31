@@ -59,7 +59,7 @@ export default {
   content: {
     liveEdit: false
   },
-
+  // serverMiddleware: ['~/api'],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }

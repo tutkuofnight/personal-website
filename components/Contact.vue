@@ -8,7 +8,7 @@
       i.bx.bx-envelope
     a(href="https://twitter.com/tutklon" target="_blank")
       i.bx.bxl-twitter
-    a(href="https://www.instagram.com/tutklon/" target="_blank")
+    a(href="https://www.instagram.com/kral.tutku/" target="_blank")
       i.bx.bxl-instagram
 </template>
 

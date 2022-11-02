@@ -54,7 +54,7 @@ export default {
       </div>
     </div>
     <div class="img-content">
-      <img src="/img/backgrounds/shinji.png" class="bg-img">
+      <img src="/img/backgrounds/byakuya.png" class="bg-img">
     </div>
   </main>
 </template>

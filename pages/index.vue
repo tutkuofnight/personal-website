@@ -21,14 +21,9 @@ export default {
       // })
     }
   },
-  // async asyncData(ctx){
-  //   if(!localStorage.getItem("bg-type")){
-  //     const res = await fetch('http://localhost:3000/api/bg-type')
-  //     localStorage.setItem("bg-type" , res.data)
-  //   }
-  // },
   methods: {
-    ...mapGetters(['getDeveloperName'])
+    ...mapGetters(['getDeveloperName']),
+
   },
   computed: {
     // backgroundSetter(){
@@ -50,11 +45,13 @@ export default {
           <nuxt-link class="direct-lnk" to="#blog">/blog</nuxt-link>
           <nuxt-link class="direct-lnk" to="#cv">/cv</nuxt-link>
         </section>
-        <Footer></Footer>
+        <footer>
+          <Contact />
+        </footer>
       </div>
     </div>
     <div class="img-content">
-      <img src="/img/backgrounds/shinji.png" class="bg-img">
+      <img src="/img/backgrounds/kurotsuchi.png" class="bg-img">
     </div>
   </main>
 </template>
@@ -77,7 +74,6 @@ main {
     padding-left: 40px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    height: 100vh;
     margin-top: -15px;
     .context {
       section {
@@ -128,15 +124,18 @@ main {
     border-bottom: 2px solid #e8398b;
   }
 }
-@media screen and (max-width: 1620px) {
+@media screen and (max-width: 1400px) {
   .bg-img {
     width: fit-content;
     height: fit-content;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1320px) and (orientation: portrait) {
   main {
     grid-template-columns: 50% 50%;
+  }
+  .bg-img {
+    height: 100vh;
   }
 }
 @media screen and (max-width: 820px) {

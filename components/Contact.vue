@@ -35,8 +35,7 @@ footer {
 @media screen and (max-width: 800px){
   footer {
     padding: 40px 0px;
-    position: absolute;
-    bottom: 0;
+    position: static;
   }
 }
 </style>

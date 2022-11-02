@@ -1,5 +1,11 @@
+require('dotenv').config()
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  env: {
+    spotify_client_id: process.env.SPOTIFY_CLIENT_ID,
+    spotify_client_secret: process.env.SPOTIFY_CLIENT_SECRET,
+    spotify_access_token: process.env.SPOTIFY_ACCESS_TOKEN
+  },
   head: {
     title: 'Tutku Uçan',
     htmlAttrs: {
@@ -61,5 +67,7 @@ export default {
   },
   // serverMiddleware: ['~/api'],
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: null
+  },
 }

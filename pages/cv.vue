@@ -34,4 +34,12 @@ export default {
     box-shadow: rgb(43, 43, 43) 0px 0px 30px 0px;
   }
 }
+@media screen and (max-width: 900px) {
+  .cv-content {
+    padding: 30px;
+    img {
+      width: 100%;
+    }
+  }
+}
 </style>

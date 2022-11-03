@@ -1,5 +1,6 @@
 <script>
 import {mapGetters} from 'vuex'
+import theme from '../theme.config.js'
 export default {
   name: 'IndexPage',
   data(){
@@ -19,6 +20,7 @@ export default {
       //   12: "yamamoto",
       //   13: "kyoraku"
       // })
+      theme: theme
     }
   },
   methods: {
@@ -51,7 +53,7 @@ export default {
       </div>
     </div>
     <div class="img-content">
-      <img src="/img/backgrounds/kurotsuchi.png" class="bg-img">
+      <img :src="theme.bgName" class="bg-img">
     </div>
   </main>
 </template>

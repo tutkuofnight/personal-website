@@ -1,10 +1,12 @@
 require('dotenv').config()
+global.bgName = "toshiro"
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   env: {
     spotify_client_id: process.env.SPOTIFY_CLIENT_ID,
     spotify_client_secret: process.env.SPOTIFY_CLIENT_SECRET,
-    spotify_access_token: process.env.SPOTIFY_ACCESS_TOKEN
+    spotify_access_token: process.env.SPOTIFY_ACCESS_TOKEN,
+    bgName: "toshiro"
   },
   head: {
     title: 'Tutku Uçan',

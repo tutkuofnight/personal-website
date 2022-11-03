@@ -6,26 +6,32 @@ export default {
       title: "CV | Tutku Uçan"
     }
   },
-  async asyncData({$content}){
-    const cv = await $content('cv').fetch()
-    return {cv}
-  }
 }
 </script>
 
 <template lang="pug">
 .container
-  div
-    br
-    br
-    nuxt-content(:document="cv")
   br
+  br
+  h2 Don't worry! still developing 😊
+  .cv-content
+    img(src="/img/CV.svg")
 </template>
 
 <style lang="scss" scoped>
 .container {
-  & + div {
-    margin-top: 30px;
+  text-align: center;
+  color: whitesmoke;
+}
+.cv-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 50px;
+  img {
+    border-radius: 5px;
+    box-shadow: rgb(43, 43, 43) 0px 0px 30px 0px;
   }
 }
 </style>

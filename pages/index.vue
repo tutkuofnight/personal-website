@@ -43,7 +43,7 @@ export default {
         </section>
         <section>
           <nuxt-link class="direct-lnk" to="#blog">/blog</nuxt-link>
-          <nuxt-link class="direct-lnk" to="#cv">/cv</nuxt-link>
+          <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
         </section>
         <footer>
           <Contact />

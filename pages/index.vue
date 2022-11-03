@@ -42,7 +42,7 @@ export default {
           <small>Full-Stack Web Developer</small>
         </section>
         <section>
-          <nuxt-link class="direct-lnk" to="#blog">/blog</nuxt-link>
+          <button class="direct-lnk disabled" to="#blog">/blog</button>
           <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
         </section>
         <footer>
@@ -58,6 +58,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../static/css/veriables';
+button {
+  border: none;
+  background: none;
+}
 main {
   width: 100%;
   height: 100vh;
@@ -122,6 +126,13 @@ main {
   &:hover {
     color: #e8398b;
     border-bottom: 2px solid #e8398b;
+  }
+  &.disabled {
+    color: rgb(146, 146, 146);
+    border-bottom: none;
+    &:hover {
+      cursor: not-allowed;
+    }
   }
 }
 @media screen and (max-width: 1400px) {

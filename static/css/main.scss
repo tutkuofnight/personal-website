@@ -43,12 +43,7 @@ body {
     transform: scale(1);
   }
 }
-.bg-img {
-  width: 100%;
-  height: max-content;
-  overflow: hidden;
-  opacity: 0.8;
-}
+
 .loading-fade-enter-active,
 .loading-fade-leave-active {
   transition: opacity 2s;

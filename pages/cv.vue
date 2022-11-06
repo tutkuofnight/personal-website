@@ -15,24 +15,22 @@ export default {
 
 <template lang="pug">
 .container
-  img(:src="app.theme.background")
+  .cv-content
+    img(src="/img/CV.svg")
 </template>
 
 <style lang="scss" scoped>
 .container {
-  text-align: center;
-  color: whitesmoke;
+  width: 100%;
+  height: 100vh
 }
 .cv-content {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: grid;
   place-items: center;
   padding: 50px;
-  img {
-    border-radius: 5px;
-    box-shadow: rgb(43, 43, 43) 0px 0px 30px 0px;
-  }
+  background: rgba(#000000, 0.8);
 }
 @media screen and (max-width: 900px) {
   .cv-content {
@@ -41,5 +39,13 @@ export default {
       width: 100%;
     }
   }
+}
+.bg-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  overflow: hidden !important;
+  opacity: 0.6;
 }
 </style>

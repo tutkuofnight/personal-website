@@ -24,6 +24,7 @@ export default {
     },
   },
   mounted() {
+    console.log('developed by Tutku Uçan 🌺')
     this.isLoading.content = false
   },
 }
@@ -159,7 +160,12 @@ main {
     }
   }
 }
-
+.bg-img {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  opacity: 0.8;
+}
 @media screen and (max-width: 1320px) and (orientation: portrait) {
   main {
     grid-template-columns: 50% 50%;

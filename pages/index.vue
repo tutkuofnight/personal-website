@@ -63,6 +63,7 @@ export default {
               :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
             />
           </section>
+          <a class="redirect-link" href="https://github.com/tutklon/personal-website#theme-" target="_blank" rel="noopener noreferrer">Click about flowers and theme</a>
         </template>
         <template v-else>
           <section>

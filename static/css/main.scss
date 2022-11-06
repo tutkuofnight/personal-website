@@ -52,4 +52,15 @@ body {
   opacity: 0;
 }
 
-
+.redirect-link {
+  position: relative;
+  top: 30px;
+  color: whitesmoke;
+  font-size: 17px;
+  transition: 300ms all;
+}
+.redirect-link:hover {
+  background: -webkit-linear-gradient(50deg , #e8398b, #ff0f33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

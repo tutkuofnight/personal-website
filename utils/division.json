@@ -1,36 +1,39 @@
 {
   "1": {
-    "background": "yamamoto.png",
+    "background": "background.png",
     "division": 1,
     "flower": {
       "name": "Chrysanthemums",
       "desc": "Truth and Innocene",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "2": {
-    "background": "soi-fon.png",
+    "background": "background.png",
     "division": 2,
     "flower": {
       "name": "Tulip",
       "desc": "Seek Nothing",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "3": {
-    "background": "otoribashi.png",
+    "background": "background.png",
     "division": 3,
     "flower": {
       "name": "Marigold",
       "desc": "Despair",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "4": {
-    "background": "unohana.png",
+    "background": "background.png",
     "division": 4,
     "flower": {
       "name": "Bell Flower",
@@ -41,92 +44,101 @@
     }
   },
   "5": {
-    "background": "shinji.png",
+    "background": "background.png",
     "division": 5,
     "flower": {
       "name": "Lily Of The Valley",
       "desc": "Sacrifice , Danger , Pure Love , Humility , Sweetness",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "6": {
-    "background": "byakuya.png",
+    "background": "background.png",
     "division": 6,
     "flower": {
       "name": "Camellia",
       "desc": "Noble Reason",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "7": {
-    "background": "komamura.png",
+    "background": "background.png",
     "division": 7,
     "flower": {
       "name": "Iris",
       "desc": "Courage",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "8": {
-    "background": "kyoraku.png",
+    "background": "background.png",
     "division": 8,
     "flower": {
       "name": "Bird of Paradise",
       "desc": "Everyting is Obtained",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "9": {
-    "background": "kensei.png",
+    "background": "background.png",
     "division": 9,
     "flower": {
       "name": "Buttercup",
       "desc": "Oblivion",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "10": {
-    "background": "toshiro.png",
+    "background": "background.png",
     "division": 10,
     "flower": {
       "name": "Daffodil",
       "desc": "Mystery , Egoism",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "11": {
-    "background": "kenpachi.png",
+    "background": "background.png",
     "division": 11,
     "flower": {
       "name": "Yarrow",
       "desc": "Fight",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "12": {
-    "background": "kurotsuchi.png",
+    "background": "background.png",
     "division": 12,
     "flower": {
       "name": "Thistle",
       "desc": "Vengeance , Strictness , Independence",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   },
   "13": {
-    "background": "ukitake.png",
+    "background": "background.png",
     "division": 13,
     "flower": {
       "name": "Summer Snowflake",
       "desc": "Hope",
       "icon": "icon.png",
+      "icon_full": "icon-full.png",
       "img": "original.png"
     }
   }

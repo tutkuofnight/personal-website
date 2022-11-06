@@ -166,9 +166,18 @@ main {
   overflow: hidden;
   opacity: 0.8;
 }
+@media screen and (max-width: 1400px) {
+  .bg-img {
+    width: fit-content;
+    height: fit-content;
+  }
+}
 @media screen and (max-width: 1320px) and (orientation: portrait) {
   main {
     grid-template-columns: 50% 50%;
+  }
+  .bg-img {
+    height: 100vh;
   }
 }
 @media screen and (max-width: 820px) {

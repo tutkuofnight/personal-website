@@ -52,15 +52,4 @@ body {
   opacity: 0;
 }
 
-@media screen and (max-width: 1400px) {
-  .bg-img {
-    width: fit-content;
-    height: fit-content;
-  }
-}
 
-@media screen and (max-width: 1320px) and (orientation: portrait) {
-  .bg-img {
-    height: 100vh;
-  }
-}

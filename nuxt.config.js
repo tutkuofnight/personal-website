@@ -1,12 +1,14 @@
 require('dotenv').config()
-global.bgName = "toshiro"
+
+const themeType = 4
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   env: {
     spotify_client_id: process.env.SPOTIFY_CLIENT_ID,
     spotify_client_secret: process.env.SPOTIFY_CLIENT_SECRET,
     spotify_access_token: process.env.SPOTIFY_ACCESS_TOKEN,
-    bgName: "toshiro"
+    themeType: themeType
   },
   head: {
     title: 'Tutku Uçan',
@@ -20,7 +22,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/divisions/' + themeType + "/flower/icon.png" },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css',

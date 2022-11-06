@@ -12,13 +12,12 @@ export default {
     }
   },
   methods: {
-    ...mapGetters(['getDeveloperName']),
     imgLoad() {
       this.isLoading.img = false
     },
   },
   computed: {
-    ...mapState(['app']),
+    ...mapState(['app' , 'developer']),
     divisionController() {
       return this.app.theme.division == 4 ? 'flower-small' : 'flower'
     },
@@ -26,7 +25,7 @@ export default {
   mounted() {
     if(this.$route.query.flowerSection == "true")
       this.flowerSection = true
-    console.log('developed by Tutku Uçan 🌺')
+    console.log(`Developed by ${this.developer.fullname} 🌺`)
     this.isLoading.content = false
   },
 }
@@ -67,8 +66,8 @@ export default {
         </template>
         <template v-else>
           <section>
-            <h1 class="linear-text">{{ getDeveloperName() }}</h1>
-            <small class="linear-text">Full-Stack Web Developer</small>
+            <h1 class="linear-text">{{ developer.fullname }}</h1>
+            <small class="linear-text">{{ developer.title }}</small>
           </section>
           <section>
             <button class="direct-lnk disabled" to="#blog">/blog</button>

@@ -24,6 +24,8 @@ export default {
     },
   },
   mounted() {
+    if(this.$route.query.flowerSection == "true")
+      this.flowerSection = true
     console.log('developed by Tutku Uçan 🌺')
     this.isLoading.content = false
   },
@@ -196,6 +198,9 @@ main {
       }
       // background: rgba(#0000, $alpha: 0.9);
     }
+  }
+  .flower-icon {
+
   }
 }
 .img-list {

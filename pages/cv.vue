@@ -1,4 +1,5 @@
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'CvPage',
   head(){
@@ -6,16 +7,15 @@ export default {
       title: "CV | Tutku Uçan"
     }
   },
+  computed: {
+    ...mapState(['app'])
+  }
 }
 </script>
 
 <template lang="pug">
 .container
-  br
-  br
-  h2 Don't worry! still developing 😊
-  .cv-content
-    img(src="/img/CV.svg")
+  img(:src="app.theme.background")
 </template>
 
 <style lang="scss" scoped>

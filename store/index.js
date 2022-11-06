@@ -1,7 +1,11 @@
+import division from '../utils/division.json'
 const state = () => ({
+  app: {
+    theme: division[4]
+  },
   developer: {
     fullname: "Tutku Uçan",
-    age: 18
+    age: 19
   }
 })
 

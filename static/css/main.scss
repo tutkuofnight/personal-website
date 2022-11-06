@@ -5,8 +5,67 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background: black;
   font-family: 'ElMessiri' ,  sans-serif;
   // font-family: 'Ubuntu', sans-serif;
+}
+.linear-text {
+  background: -webkit-linear-gradient(50deg , #e8398b, #ff0f33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flower-icon {
+  width: 70px;
+}
+.flower {
+  width: 150px
+}
+.flower-small {
+  width: 100px !important
+}
+.flower-btn {
+  position:absolute;
+  top: 5%;
+  left: 5%;
+  cursor: pointer;
+  animation: flower 300ms infinite;
+  animation-duration: 2s;
+}
+@keyframes flower {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bg-img {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.loading-fade-enter-active,
+.loading-fade-leave-active {
+  transition: opacity 2s;
+}
+.loading-fade-enter, .loading-fade-leave-to {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .bg-img {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1320px) and (orientation: portrait) {
+  .bg-img {
+    height: 100vh;
+  }
 }

@@ -1,59 +1,90 @@
 <script>
-import {mapGetters} from 'vuex'
-import theme from '../theme.config.js'
+import { mapGetters, mapState } from 'vuex'
 export default {
   name: 'IndexPage',
-  data(){
+  data() {
     return {
-      // backgrounds: new Set({
-      //   1: "byakuya",
-      //   2: "kenpachi",
-      //   3: "kensei",
-      //   4: "komamura",
-      //   5: "kruotscuhi",
-      //   6: "otoribashi",
-      //   7: "shinji",
-      //   8: "soi-fon",
-      //   9: "toshiro",
-      //   10: "ukitake",
-      //   11: "unohana",
-      //   12: "yamamoto",
-      //   13: "kyoraku"
-      // })
-      theme: theme
+      flowerSection: false,
+      isLoading: {
+        content: true,
+        img: true,
+      },
     }
   },
   methods: {
     ...mapGetters(['getDeveloperName']),
-
+    imgLoad() {
+      this.isLoading.img = false
+    },
   },
   computed: {
-    // backgroundSetter(){
-    //   return "/img/backgrounds/" + this.backgrounds.valueOf(localStorage.getItem('bg-type') + ".png")
-    // }
-  }
+    ...mapState(['app']),
+    divisionController() {
+      return this.app.theme.division == 4 ? 'flower-small' : 'flower'
+    },
+  },
+  mounted() {
+    this.isLoading.content = false
+  },
 }
 </script>
 
 <template>
   <main>
+    <transition name="loading-fade">
+      <Loading v-if="isLoading.img && isLoading.content"></Loading>
+    </transition>
+    <div class="flower-btn" @click="flowerSection = !flowerSection">
+      <img
+        class="flower-icon"
+        :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
+        alt=""
+      />
+    </div>
     <div class="content">
       <div class="context">
-        <section>
-          <h1>{{getDeveloperName()}}</h1>
-          <small>Full-Stack Web Developer</small>
-        </section>
-        <section>
-          <button class="direct-lnk disabled" to="#blog">/blog</button>
-          <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
-        </section>
-        <footer>
-          <Contact />
-        </footer>
+        <template v-if="flowerSection">
+          <section>
+            <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
+            <small class="linear-text">{{ app.theme.flower.desc }}</small>
+          </section>
+          <section class="img-list">
+            <img
+              class="flower"
+              :class="divisionController"
+              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
+            />
+            <img
+              style="flex: 1;"
+              :class="divisionController"
+              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
+            />
+          </section>
+        </template>
+        <template v-else>
+          <section>
+            <h1 class="linear-text">{{ getDeveloperName() }}</h1>
+            <small class="linear-text">Full-Stack Web Developer</small>
+          </section>
+          <section>
+            <button class="direct-lnk disabled" to="#blog">/blog</button>
+            <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
+            <button class="direct-lnk disabled" to="#universe">
+              /universe
+            </button>
+          </section>
+          <footer>
+            <Contact />
+          </footer>
+        </template>
       </div>
     </div>
     <div class="img-content">
-      <img :src="theme.bgName" class="bg-img">
+      <img
+        @load="imgLoad"
+        :src="`/img/divisions/${app.theme.division}/${app.theme.background}`"
+        class="bg-img"
+      />
     </div>
   </main>
 </template>
@@ -93,13 +124,10 @@ main {
         &:first-child {
           border-bottom: 1px solid rgb(81, 81, 81);
           padding: 15px;
-          background: -webkit-linear-gradient(50deg , #e8398b, #ff0f33);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
         }
         &:nth-child(2) {
           margin-top: 20px;
-          & >* {
+          & > * {
             margin-right: 20px;
           }
         }
@@ -112,12 +140,6 @@ main {
     grid-row: 1 / 2;
     z-index: -1;
   }
-}
-.bg-img {
-  width: 100%;
-  height: max-content;
-  overflow: hidden;
-  opacity: 0.8;
 }
 .direct-lnk {
   font-size: 24px;
@@ -137,18 +159,10 @@ main {
     }
   }
 }
-@media screen and (max-width: 1400px) {
-  .bg-img {
-    width: fit-content;
-    height: fit-content;
-  }
-}
+
 @media screen and (max-width: 1320px) and (orientation: portrait) {
   main {
     grid-template-columns: 50% 50%;
-  }
-  .bg-img {
-    height: 100vh;
   }
 }
 @media screen and (max-width: 820px) {
@@ -168,5 +182,11 @@ main {
       // background: rgba(#0000, $alpha: 0.9);
     }
   }
+}
+.img-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 </style>

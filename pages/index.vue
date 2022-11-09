@@ -9,6 +9,7 @@ export default {
         content: true,
         img: true,
       },
+      preview: false,
     }
   },
   methods: {
@@ -17,14 +18,13 @@ export default {
     },
   },
   computed: {
-    ...mapState(['app' , 'developer']),
+    ...mapState(['app', 'developer']),
     divisionController() {
       return this.app.theme.division == 4 ? 'flower-small' : 'flower'
     },
   },
   mounted() {
-    if(this.$route.query.flowerSection == "true")
-      this.flowerSection = true
+    if (this.$route.query.flowerSection == 'true') this.flowerSection = true
     console.log(`Developed by ${this.developer.fullname} 🌺`)
     this.isLoading.content = false
   },
@@ -36,51 +36,65 @@ export default {
     <transition name="loading-fade">
       <Loading v-if="isLoading.img && isLoading.content"></Loading>
     </transition>
-    <div class="flower-btn" @click="flowerSection = !flowerSection">
-      <img
-        class="flower-icon"
-        :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
-        alt=""
-      />
-    </div>
-    <div class="content">
-      <div class="context">
-        <template v-if="flowerSection">
-          <section>
-            <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
-            <small class="linear-text">{{ app.theme.flower.desc }}</small>
-          </section>
-          <section class="img-list">
+
+    <button @click="preview = !preview" class="preview-btn">
+      <i :class="{ 'bx bxs-color': !preview, 'bx bx-color': preview }"></i>
+    </button>
+    <div class="content" :class="{'leave' : preview}">
+      <transition name="fade">
+        <div v-show="!preview">
+          <div class="flower-btn" @click="flowerSection = !flowerSection">
             <img
-              class="flower"
-              :class="divisionController"
-              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
+              class="flower-icon"
+              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
+              alt=""
             />
-            <img
-              style="flex: 1;"
-              :class="divisionController"
-              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
-            />
-          </section>
-          <a class="redirect-link" href="https://github.com/tutklon/personal-website#theme-" target="_blank" rel="noopener noreferrer">Click about flowers and theme</a>
-        </template>
-        <template v-else>
-          <section>
-            <h1 class="linear-text">{{ developer.fullname }}</h1>
-            <small class="linear-text">{{ developer.title }}</small>
-          </section>
-          <section>
-            <button class="direct-lnk disabled" to="#blog">/blog</button>
-            <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
-            <button class="direct-lnk disabled" to="#universe">
-              /universe
-            </button>
-          </section>
-          <footer>
-            <Contact />
-          </footer>
-        </template>
-      </div>
+          </div>
+          <div class="context">
+            <template v-if="flowerSection">
+              <section>
+                <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
+                <small class="linear-text">{{ app.theme.flower.desc }}</small>
+              </section>
+              <section class="img-list">
+                <img
+                  class="flower"
+                  :class="divisionController"
+                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
+                />
+                <img
+                  style="flex: 1"
+                  :class="divisionController"
+                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
+                />
+              </section>
+              <a
+                class="redirect-link"
+                href="https://github.com/tutklon/personal-website#theme-"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Click about flowers and theme</a
+              >
+            </template>
+            <template v-else>
+              <section>
+                <h1 class="linear-text">{{ developer.fullname }}</h1>
+                <small class="linear-text">{{ developer.title }}</small>
+              </section>
+              <section>
+                <button class="direct-lnk disabled" to="#blog">/blog</button>
+                <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
+                <button class="direct-lnk disabled" to="#universe">
+                  /universe
+                </button>
+              </section>
+              <footer>
+                <Contact />
+              </footer>
+            </template>
+          </div>
+        </div>
+      </transition>
     </div>
     <div class="img-content">
       <img
@@ -115,6 +129,12 @@ main {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-top: -15px;
+    transition:300ms all;
+    &.leave {
+      background: rgba(#0000, $alpha: 0);
+      color: white;
+      box-shadow: rgba(#0000, $alpha: 0) 0px 0px 0px 0px;
+    }
     .context {
       section {
         h1 {
@@ -162,6 +182,20 @@ main {
     }
   }
 }
+.preview-btn {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  border-radius: 4px;
+  padding: 8px;
+  background: rgba(black, 0.4);
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+  transition: 250ms all;
+}
 .bg-img {
   width: 100%;
   height: max-content;
@@ -200,7 +234,6 @@ main {
     }
   }
   .flower-icon {
-
   }
 }
 .img-list {

@@ -52,6 +52,14 @@ body {
   opacity: 0;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 300ms;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .redirect-link {
   position: relative;
   top: 30px;

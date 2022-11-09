@@ -1,0 +1,14 @@
+{
+  "byakuya_damaged": {
+    "background": "byakuya_damaged.png",
+    "division": 6,
+    "special": "Today's Special",
+    "flower": {
+      "name": "Despair",
+      "desc": "You got damage with your own power. How does it feel?",
+      "icon": "icon.png",
+      "icon_full": "icon-full.png",
+      "img": "original.png"
+    }
+  }
+}

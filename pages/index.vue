@@ -51,8 +51,9 @@ export default {
             />
           </div>
           <div class="context">
-            <template v-if="flowerSection">
+            <div style="padding-left: 40px" v-if="flowerSection">
               <section>
+                <span class="linear-text-special special-event-text" v-if="app.theme.special">{{app.theme.special}}</span>
                 <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
                 <small class="linear-text">{{ app.theme.flower.desc }}</small>
               </section>
@@ -75,7 +76,7 @@ export default {
                 rel="noopener noreferrer"
                 >Click about flowers and theme</a
               >
-            </template>
+            </div>
             <template v-else>
               <section>
                 <h1 class="linear-text">{{ developer.fullname }}</h1>
@@ -125,7 +126,6 @@ main {
     box-shadow: rgba(#0000, $alpha: 0.9) 150px 0px 150px 150px;
     display: grid;
     place-items: center;
-    padding-left: 40px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-top: -15px;
@@ -136,7 +136,11 @@ main {
       box-shadow: rgba(#0000, $alpha: 0) 0px 0px 0px 0px;
     }
     .context {
+      padding-left: 40px;
       section {
+        span {
+          font-size: 1.1em;
+        }
         h1 {
           font-size: 4em;
           margin-bottom: 0px;
@@ -147,6 +151,10 @@ main {
         &:first-child {
           border-bottom: 1px solid rgb(81, 81, 81);
           padding: 15px;
+          padding-left: 0px;
+          h1 {
+            margin-top: 20px;
+          }
         }
         &:nth-child(2) {
           margin-top: 20px;
@@ -242,4 +250,5 @@ main {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 </style>

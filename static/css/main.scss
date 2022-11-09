@@ -10,6 +10,11 @@ body {
   font-family: 'ElMessiri' ,  sans-serif;
   // font-family: 'Ubuntu', sans-serif;
 }
+.linear-text-special {
+  background: linear-gradient(90deg, rgba(139,41,200,1) 26%, rgba(57,79,218,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .linear-text {
   background: -webkit-linear-gradient(50deg , #e8398b, #ff0f33);
   -webkit-background-clip: text;
@@ -31,6 +36,32 @@ body {
   cursor: pointer;
   animation: flower 300ms infinite;
   animation-duration: 2s;
+}
+.special-event-text {
+  font-weight: bold;
+  animation: specialEventTextAnimation 1000ms infinite;
+  border: 1px solid rgba(139,41,200,1);
+  border-radius: 2px;
+  padding: 0px 12px;
+  padding-top: 2px;
+  line-height: 10px;
+}
+@keyframes specialEventTextAnimation {
+  0% {
+    background: linear-gradient(90deg, rgba(139,41,200,1) 26%, rgba(57,79,218,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(57,79,218,1) 26%, rgba(139,41,200,1)  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(139,41,200,1) 26%, rgba(57,79,218,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 @keyframes flower {
   0% {

@@ -1,6 +1,10 @@
 require('dotenv').config()
 
-const themeType = 4
+const appGlobal = {
+  themeType: "byakuya_damaged",
+  specialEvent: true,
+  divison: 6
+}
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -8,7 +12,8 @@ export default {
     spotify_client_id: process.env.SPOTIFY_CLIENT_ID,
     spotify_client_secret: process.env.SPOTIFY_CLIENT_SECRET,
     spotify_access_token: process.env.SPOTIFY_ACCESS_TOKEN,
-    themeType: themeType
+    themeType: appGlobal.themeType,
+    specialEvent: appGlobal.specialEvent
   },
   head: {
     title: 'Tutku Uçan',
@@ -22,7 +27,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/divisions/' + themeType + "/flower/icon.png" },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/divisions/' + appGlobal.divison + "/flower/icon.png" },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css',

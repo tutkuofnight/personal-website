@@ -1,7 +1,8 @@
 import division from '../utils/division.json'
+import specialMoment from '../utils/special-moment.json'
 const state = () => ({
   app: {
-    theme: division[process.env.themeType]
+    theme: process.env.specialEvent ? specialMoment[process.env.themeType] : division[process.env.themeType]
   },
   developer: {
     fullname: "Tutku Uçan",

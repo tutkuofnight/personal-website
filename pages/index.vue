@@ -232,7 +232,9 @@ main {
   main {
     grid-template-columns: 100%;
     .content {
-      padding-left: 0;
+      .context {
+        padding-left: 0;
+      }
       section {
         &:first-child {
           text-align: center;

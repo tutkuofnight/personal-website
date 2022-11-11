@@ -59,19 +59,17 @@ export default {
               </section>
               <section class="img-list">
                 <img
-                  v-if="app.theme.flower.icon_full"
-                  class="flower"
-                  :class="divisionController"
-                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
-                />
-                <!--
-                <img
                   v-if="app.theme.flower.img"
                   style="flex: 1"
                   :class="divisionController"
                   :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
                 />
-                -->
+                <img
+                  v-if="app.theme.flower.icon_full"
+                  class="flower"
+                  :class="divisionController"
+                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
+                />
               </section>
               <a
                 class="redirect-link"

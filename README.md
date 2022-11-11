@@ -13,7 +13,7 @@ Sacrifice , Danger , Pure Love , Humility , Sweetness
 
 <div>
   <img style="" src="https://tutku.vercel.app/img/divisions/5/flower/icon-full.png" />
-  <img style="width: 250px;" src="https://tutku.vercel.app/img/divisions/5/flower/original.png" />
+  <img style="width: 250px;" src="https://tutku.vercel.app/img/divisions/5/flower/original.jpg" />
 </div>
 
 ## Background

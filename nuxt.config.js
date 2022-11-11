@@ -74,7 +74,7 @@ export default {
   content: {
     liveEdit: false
   },
-  // serverMiddleware: ['~/api'],
+  serverMiddleware: ['~/api/server.js'],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: null

@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 const appGlobal = {
-  themeType: "byakuya_damaged",
-  specialEvent: true,
-  divison: 6
+  themeType: 5,
+  specialEvent: false,
+  divison: 5
 }
 
 export default {

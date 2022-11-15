@@ -1,8 +1,8 @@
 require('dotenv').config()
 
 const appGlobal = {
-  themeType: 5,
-  specialEvent: false,
+  themeType: "wandenreich",
+  specialEvent: true,
   divison: 5
 }
 
@@ -27,7 +27,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/divisions/' + appGlobal.divison + "/flower/icon.png" },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/specials/' + appGlobal.themeType + "/wandenreich-white.png" },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css',

@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
 <div class="loading-background">
-  <img class="flower-icon" :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`">
+  <img class="flower-icon" :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/${app.theme.icon}`">
 </div>
 </template>
 

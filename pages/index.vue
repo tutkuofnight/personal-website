@@ -1,5 +1,5 @@
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'IndexPage',
   data() {
@@ -46,7 +46,7 @@ export default {
           <div class="flower-btn" @click="flowerSection = !flowerSection">
             <img
               class="flower-icon"
-              :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
+              :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.icon}`"
               alt=""
             />
           </div>
@@ -57,12 +57,12 @@ export default {
                 <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
                 <small class="linear-text">{{ app.theme.flower.desc }}</small>
               </section>
-              <section class="img-list">
+              <section class="img-list" v-if="app.theme.flower.image == false">
                 <img
-                  v-if="app.theme.flower.img"
+                  v-if="app.theme.flower.original"
                   style="flex: 1"
                   :class="divisionController"
-                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.img}`"
+                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.original}`"
                 />
                 <img
                   v-if="app.theme.flower.icon_full"
@@ -73,10 +73,10 @@ export default {
               </section>
               <a
                 class="redirect-link"
-                href="https://github.com/tutklon/personal-website#theme-"
+                :href="app.theme.special ? app.theme.url : 'https://github.com/tutklon/personal-website#theme-'"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Click about flowers and theme</a
+                >{{app.theme.special ? "Click about what is today's special " : 'Click about flowers and theme'}}</a
               >
             </div>
             <template v-else>
@@ -102,7 +102,7 @@ export default {
     <div class="img-content">
       <img
         @load="imgLoad"
-        :src="`/img/divisions/${app.theme.division}/${app.theme.background}`"
+        :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.background}` : `/img/divisions/${app.theme.division}/${app.theme.background}`"
         class="bg-img"
       />
     </div>

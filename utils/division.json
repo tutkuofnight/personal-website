@@ -7,7 +7,7 @@
       "desc": "Truth and Innocene",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
       "desc": "Seek Nothing",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "3": {
@@ -29,7 +29,7 @@
       "desc": "Despair",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "4": {
@@ -40,7 +40,7 @@
       "desc": "Those Who Grieve Are Loved",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "5": {
@@ -51,7 +51,7 @@
       "desc": "Sacrifice , Danger , Pure Love , Humility , Sweetness",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.jpg"
+      "original": "original.jpg"
     }
   },
   "6": {
@@ -62,7 +62,7 @@
       "desc": "Noble Reason",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "7": {
@@ -73,7 +73,7 @@
       "desc": "Courage",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "8": {
@@ -84,7 +84,7 @@
       "desc": "Everyting is Obtained",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "9": {
@@ -95,7 +95,7 @@
       "desc": "Oblivion",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "10": {
@@ -106,7 +106,7 @@
       "desc": "Mystery , Egoism",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "11": {
@@ -117,7 +117,7 @@
       "desc": "Fight",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "12": {
@@ -128,7 +128,7 @@
       "desc": "Vengeance , Strictness , Independence",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   },
   "13": {
@@ -139,7 +139,7 @@
       "desc": "Hope",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
+      "original": "original.png"
     }
   }
 }

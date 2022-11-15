@@ -8,7 +8,20 @@
       "desc": "You got damage with your own power. How does it feel?",
       "icon": "icon.png",
       "icon_full": "icon-full.png",
-      "img": "original.png"
-    }
+      "original": "original.png"
+    },
+    "date": "06/11/2022"
+  },
+  "wandenreich": {
+    "name": "wandenreich",
+    "background": "background.png",
+    "special": "Today's Special",
+    "flower": {
+      "name": "Wandenreich",
+      "desc": "When my Quincy were defeated in battle, a thousand years ago, with nowhere left to run... They fled the human world and sought refuge in the place where you were the least vigilant... Seireitei itself. Within Seireitei they created hidden spaces from Reishi for themselves in all the city's shadows... And they named this realm our 'hidden empire': the Wandenreich.",
+      "icon": "wandenreich-white.png"
+    },
+    "url": "https://bleach.fandom.com/wiki/Wandenreich",
+    "date": "15/11/2022"
   }
 }

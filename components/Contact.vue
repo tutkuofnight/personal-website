@@ -1,6 +1,6 @@
 <template lang="pug">
   footer
-    a(href="https://www.linkedin.com/in/tutku-u%C3%A7an-610170195/" target="_blank")
+    a(href="https://www.linkedin.com/in/tutkuucan/" target="_blank")
       i.bx.bxl-linkedin-square
     a(href="https://github.com/tutklon" target="_blank")
       i.bx.bxl-github

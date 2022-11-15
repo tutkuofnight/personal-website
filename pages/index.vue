@@ -51,11 +51,11 @@ export default {
             />
           </div>
           <div class="context">
-            <div style="padding-left: 40px" v-if="flowerSection">
+            <div class="flower-section" v-if="flowerSection">
               <section>
                 <span class="linear-text-special special-event-text" v-if="app.theme.special">{{app.theme.special}}</span>
                 <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
-                <small class="linear-text">{{ app.theme.flower.desc }}</small>
+                <small id="desc" class="linear-text">{{ app.theme.flower.desc }}</small>
               </section>
               <section class="img-list" v-if="app.theme.flower.image == false">
                 <img
@@ -212,6 +212,12 @@ main {
   overflow: hidden;
   opacity: 0.8;
 }
+.flower-section {
+  padding-left: 40px;
+  #desc {
+    padding: 5px 10px;
+  }
+}
 @media screen and (max-width: 1400px) {
   .bg-img {
     width: fit-content;
@@ -245,7 +251,9 @@ main {
       // background: rgba(#0000, $alpha: 0.9);
     }
   }
-  .flower-icon {
+  .flower-section {
+    padding-left: 0;
+    text-align: center;
   }
 }
 .img-list {

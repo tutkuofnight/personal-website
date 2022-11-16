@@ -57,7 +57,7 @@ export default {
                 <h1 class="linear-text">{{ app.theme.flower.name }}</h1>
                 <small id="desc" class="linear-text">{{ app.theme.flower.desc }}</small>
               </section>
-              <section class="img-list" v-if="app.theme.flower.image == false">
+              <section class="img-list" v-if="app.theme.flower">
                 <img
                   v-if="app.theme.flower.original"
                   style="flex: 1"

@@ -46,7 +46,7 @@ export default {
           <div class="flower-btn" @click="flowerSection = !flowerSection">
             <img
               class="flower-icon"
-              :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.icon}`"
+              :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
               alt=""
             />
           </div>

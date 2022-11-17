@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 const appGlobal = {
-  themeType: 5,
+  themeType: 1,
   specialEvent: false,
-  divison: 5
+  divison: 1
 }
 
 export default {

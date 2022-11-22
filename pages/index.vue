@@ -60,14 +60,12 @@ export default {
               <section class="img-list" v-if="app.theme.flower">
                 <img
                   v-if="app.theme.flower.original"
-                  style="width: 200px"
                   :class="divisionController"
                   :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.original}`"
                 />
                 <img
                   v-if="app.theme.flower.icon_full"
                   class="flower"
-                  style="width: 200px"
                   :class="divisionController"
                   :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
                 />

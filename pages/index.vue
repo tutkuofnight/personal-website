@@ -85,7 +85,7 @@ export default {
               </section>
               <section>
                 <button class="direct-lnk disabled" to="#blog">/blog</button>
-                <nuxt-link class="direct-lnk" to="/cv">/cv</nuxt-link>
+                <button class="direct-lnk disabled" to="#cv">/cv</button>
                 <button class="direct-lnk disabled" to="#universe">
                   /universe
                 </button>

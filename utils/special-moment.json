@@ -23,5 +23,17 @@
     },
     "url": "https://bleach.fandom.com/wiki/Wandenreich",
     "date": "15/11/2022"
+  },
+  "gotei0": {
+    "name": "gotei0",
+    "background": "background.png",
+    "special": "Weekly Special",
+    "flower": {
+      "name": "Team 0",
+      "desc": "Leader: Ichibē Hyōsube - Royal Guards: Kirio Hikifune , Tenjirō Kirinji , Ōetsu Nimaiya , Senjumaru Shutara",
+      "icon": "icon.png",
+      "icon_full": "icon-full.png"
+    },
+    "url": "https://bleach.fandom.com/wiki/Royal_Guard"
   }
 }

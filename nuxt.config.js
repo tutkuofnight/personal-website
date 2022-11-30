@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 const appGlobal = {
-  themeType: 8,
-  specialEvent: false,
-  divison: 8
+  themeType: "gotei0",
+  specialEvent: true,
+  divison: "gotei0"
 }
 
 export default {
@@ -27,7 +27,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/divisions/' + appGlobal.themeType + "/flower/icon.png" },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/specials/' + appGlobal.themeType + "/flower/icon.png" },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css',

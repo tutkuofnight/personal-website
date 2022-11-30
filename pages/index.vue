@@ -46,7 +46,7 @@ export default {
           <div class="flower-btn" @click="flowerSection = !flowerSection">
             <img
               class="flower-icon"
-              :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
+              :src="app.theme.special ? `/img/specials/${app.theme.name}/flower/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
               alt=""
             />
           </div>
@@ -61,13 +61,13 @@ export default {
                 <img
                   v-if="app.theme.flower.original"
                   :class="divisionController"
-                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.original}`"
+                  :src="`/img/divisions/${app.theme.name}/flower/${app.theme.flower.original}`"
                 />
                 <img
                   v-if="app.theme.flower.icon_full"
                   class="flower"
                   :class="divisionController"
-                  :src="`/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon_full}`"
+                  :src="`/img/specials/${app.theme.name}/flower/${app.theme.flower.icon_full}`"
                 />
               </section>
               <a

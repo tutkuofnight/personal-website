@@ -10,12 +10,16 @@ export default {
         img: true,
       },
       preview: false,
+      wordModal: false
     }
   },
   methods: {
     imgLoad() {
       this.isLoading.img = false
     },
+    closeModal(e){
+      this.wordModal = e
+    }
   },
   computed: {
     ...mapState(['app', 'developer']),
@@ -33,6 +37,9 @@ export default {
 
 <template>
   <main>
+    <transition name="fade">
+      <WordModal v-if="wordModal" @closeModal="closeModal($event)"></WordModal>
+    </transition>
     <transition name="loading-fade">
       <Loading v-if="isLoading.img && isLoading.content"></Loading>
     </transition>
@@ -86,8 +93,8 @@ export default {
               <section>
                 <button class="direct-lnk disabled" to="#blog">/blog</button>
                 <button class="direct-lnk disabled" to="#cv">/cv</button>
-                <button class="direct-lnk disabled" to="#universe">
-                  /universe
+                <button class="direct-lnk" @click="wordModal = true">
+                  /words
                 </button>
               </section>
               <footer>
@@ -113,6 +120,7 @@ export default {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 main {
   width: 100%;

@@ -60,6 +60,7 @@ export default {
     height: 400px;
     border-radius: 12px;
     padding: 2px;
+    box-shadow: rgb(81, 81, 81) 0px 0px 20px 0px;
     .modal {
       background: black;
       width: 100%;

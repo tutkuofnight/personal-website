@@ -1,15 +1,17 @@
 <template lang="pug">
-  footer
-    a(href="https://www.linkedin.com/in/tutkuucan/" target="_blank")
-      i.bx.bxl-linkedin-square
-    a(href="https://github.com/tutklon" target="_blank")
-      i.bx.bxl-github
-    a(href="mailto:tutkuucan369@gmail.com" target="_blank")
-      i.bx.bx-envelope
-    a(href="https://twitter.com/tutklon" target="_blank")
-      i.bx.bxl-twitter
-    a(href="https://www.instagram.com/kral.tutku/" target="_blank")
-      i.bx.bxl-instagram
+footer
+  a(href="https://www.linkedin.com/in/tutkuucan/" target="_blank")
+    i.bx.bxl-linkedin-square
+  a(href="https://github.com/tutklon" target="_blank")
+    i.bx.bxl-github
+  a(href="mailto:tutkuucan369@gmail.com" target="_blank")
+    i.bx.bx-envelope
+  a(href="https://twitter.com/tutklon" target="_blank")
+    i.bx.bxl-twitter
+  a(href="https://open.spotify.com/user/8a9sj2ijmfftz57lttyqa0ann?si=e99f4d639fa84f4d&nd=1" target="_blank")
+    i.bx.bxl-spotify
+  a(href="https://www.instagram.com/kral.tutku/" target="_blank")
+    i.bx.bxl-instagram
 </template>
 
 <style lang="scss" scoped>

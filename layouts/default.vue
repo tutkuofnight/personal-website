@@ -1,11 +1,6 @@
 <template lang="pug">
-  .like-you
-    //- AppHeader(v-if="$route.path !== '/'")
+main
+  header
+  div
     Nuxt
 </template>
-
-<style>
-.like-you {
-
-}
-</style>

@@ -1,35 +1,34 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-    name: "IndexPage",
-    data() {
-        return {
-            flowerSection: false,
-            isLoading: {
-                content: true,
-                img: true,
-            },
-            preview: false,
-            wordModal: false
-        };
+  name: 'IndexPage',
+  data() {
+    return {
+      flowerSection: false,
+      isLoading: {
+        content: true,
+        img: true,
+      },
+      preview: false,
+      wordModal: false,
+    }
+  },
+  methods: {
+    imgLoad() {
+      this.isLoading.img = false
     },
-    methods: {
-        imgLoad() {
-            this.isLoading.img = false;
-        },
-        closeModal(e) {
-            this.wordModal = e;
-        }
+    closeModal(e) {
+      this.wordModal = e
     },
-    computed: {
-        ...mapState(["app", "developer"]),
-    },
-    mounted() {
-        if (this.$route.query.flowerSection == "true")
-            this.flowerSection = true;
-        console.log(`Developed by ${this.developer.fullname} 🌺`);
-        this.isLoading.content = false;
-    },
+  },
+  computed: {
+    ...mapState(['app', 'developer']),
+  },
+  mounted() {
+    if (this.$route.query.flowerSection == 'true') this.flowerSection = true
+    console.log(`Developed by ${this.developer.fullname} 🌺`)
+    this.isLoading.content = false
+  },
 }
 </script>
 
@@ -45,13 +44,17 @@ export default {
     <button @click="preview = !preview" class="preview-btn">
       <i :class="{ 'bx bxs-color': !preview, 'bx bx-color': preview }"></i>
     </button>
-    <div class="content" :class="{'leave' : preview}">
+    <div class="content" :class="{ leave: preview }">
       <transition name="fade">
         <div v-show="!preview">
           <div class="flower-btn" @click="flowerSection = !flowerSection">
             <img
               class="flower-icon"
-              :src="app.theme.special ? `/img/specials/${app.theme.name}/flower/${app.theme.flower.icon}` : `/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`"
+              :src="
+                app.theme.special
+                  ? `/img/specials/${app.theme.name}/flower/${app.theme.flower.icon}`
+                  : `/img/divisions/${app.theme.division}/flower/${app.theme.flower.icon}`
+              "
               alt=""
             />
           </div>
@@ -79,7 +82,11 @@ export default {
     <div class="img-content">
       <img
         @load="imgLoad"
-        :src="app.theme.special ? `/img/specials/${app.theme.name}/${app.theme.background}` : `/img/divisions/${app.theme.division}/${app.theme.background}`"
+        :src="
+          app.theme.special
+            ? `/img/specials/${app.theme.name}/${app.theme.background}`
+            : `/img/divisions/${app.theme.division}/${app.theme.background}`
+        "
         class="bg-img"
       />
     </div>
@@ -109,7 +116,7 @@ main {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-top: -15px;
-    transition:300ms all;
+    transition: 300ms all;
     &.leave {
       background: rgba(#0000, $alpha: 0);
       color: white;
@@ -230,5 +237,4 @@ main {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 </style>

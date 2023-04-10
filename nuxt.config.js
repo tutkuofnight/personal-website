@@ -12,8 +12,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,8 +35,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
-
+  axios:{
+    proxyHeaders: false,
+    credentials: true,
+    proxy: true
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

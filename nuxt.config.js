@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'App',
+    title: 'Tutku Uçan | Software Developer',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Tutku Uçan was improve himself about Software Development since 4 years about Web Development, DevOps, Databases and Programming Basics. Now he is professional Software Developer and currently working at eQuota as Frontend Developer' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

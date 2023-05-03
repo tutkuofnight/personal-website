@@ -20,10 +20,22 @@ body {
 
 #app {
   @include grid-center;
-  background: whitesmoke;
+  background: $background-color;
   width: 100%;
   height: 100vh;
   h1 {
     color: $themeColor;
+    margin-bottom: 10px;
+  }
+  p {
+    color: $text-white;
+  }
+  a {
+    color: $themeColor;
+    border-bottom: 2px solid $themeColor;
+    &:hover {
+      background: $themeColor;
+      color: $text-black;
+    }
   }
 }

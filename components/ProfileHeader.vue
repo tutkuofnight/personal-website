@@ -29,7 +29,7 @@ export default {
               li Backend: Node.js, MongoDB
               li Frontend: React.js, Canvas API
         .wrapper
-          a(href="https://github.com/tutkuofnight/fitness-program-creator" target="_blank" ) Fitness Training & Diet Program Creator
+          a(href="https://github.com/tutkuofnight/fitness-program-creator" target="_blank" ) FitProgram
           br
           br
           p You can create your fitness training or diet program as public or private. You can view other people's public training and diet programs.

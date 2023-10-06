@@ -41,25 +41,10 @@ export default {
 
 <template lang="pug">
 #app
-  //- img.bg(src="@/static/images/bg2.png")
   profile-header
   spotify(v-if="renderSpotifyComponent")
 </template>
 
 <style lang="scss" scoped>
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  opacity: 0.3;
-  background-size: cover;
-}
-@media (max-width: 768px) {
-  .bg {
-    width: auto;
-  }
-}
+
 </style>

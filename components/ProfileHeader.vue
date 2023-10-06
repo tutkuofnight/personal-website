@@ -32,7 +32,7 @@ export default {
           a(href="https://github.com/tutkuofnight/fitness-program-creator" target="_blank" ) FitProgram
           br
           br
-          p You can create your fitness training or diet program as public or private. You can view other people's public training and diet programs.
+          p You can create your fitness workout and diet program as public or private. You can view other people's public training and diet programs.
           div
             p.title Tech Stack:
             ul

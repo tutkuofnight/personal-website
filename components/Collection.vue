@@ -1,7 +1,7 @@
 <template lang="pug">
 .collection
   h1 {{ title }}
-  p
+  p 
     slot(name="description")
   .content 
     slot(name="content")
@@ -18,5 +18,8 @@ export default {
 <style lang="scss" scoped>
 .collection {
   margin-bottom: 40px;
+  p {
+    font-weight: 400;
+  }
 }
 </style>

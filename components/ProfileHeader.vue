@@ -8,7 +8,7 @@ export default {
 .header
   Collection(title="Heyo!")
     template(#description)
-      p I am Tutku Uçan. Since 4 years interest with Software Development. Last 3 years of this passed with Web Development. I Graduated in highschool IT and Web Design.  I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota. Currently working as Frontend Developer but i am continue to develop full stack web projects.
+      | I am Tutku Uçan. Since 4 years interest with Software Development. Last 3 years of this passed with Web Development. I Graduated in highschool IT and Web Design.  I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota. Currently working as Frontend Developer but i am continue to develop full stack web projects.
     template(#content)
       .links
         a(href="https://www.linkedin.com/in/tutkuucan/" target="_blank") Linkedin

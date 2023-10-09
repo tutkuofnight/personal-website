@@ -8,11 +8,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Tutku Uçan was improve himself about Software Development since 4 years about Web Development, DevOps, Databases and Programming Basics. Now he is professional Software Developer and currently working at eQuota as Frontend Developer' },
+      { hid: 'description', name: 'description', content: 'Tutku Uçan was improve himself about Software Development since 4 years about Web Development, DevOps, Databases and Programming Basics. Now he is professional Software Developer. He worked at eQuota GmbH as Frontend Developer on beginning his career. Now he is Freelancer and developing own Full-Stack Web Projects.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' }
     ],
   },

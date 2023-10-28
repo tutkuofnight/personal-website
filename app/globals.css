@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Monocraft'; 
+  src: url('./assets/fonts/Monocraft.woff2') format('woff2'), 
+       url('./assets/fonts/Monocraft.woff') format('woff');
+}
+@layer base {
+  body {
+    font-family: 'Monocraft', sans-serif !important;
+    @apply bg-black text-white;
+  }
+}
+main section {
+  @apply my-10;
+}
+.background {
+  background: url(../public/bg.png) no-repeat center center;
+  background-size: auto auto;
+  @apply min-h-screen w-full fixed -z-50 opacity-50 overflow-hidden;
+}

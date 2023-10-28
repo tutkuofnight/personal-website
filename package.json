@@ -1,27 +1,26 @@
 {
-  "name": "nuxtjs-scss-pug-starter",
-  "version": "1.0.0",
+  "name": "personal-website",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "btoa": "^1.2.1",
-    "core-js": "^3.19.3",
-    "nuxt": "^2.12.2",
-    "vue": "^2.6.14",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "lucide-react": "^0.290.0",
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
-    "sass": "^1.54.4",
-    "sass-loader": "^10.3.1",
-    "webpack": "^4.46.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
   }
 }

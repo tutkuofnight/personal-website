@@ -1,8 +1,8 @@
 import {Linkedin , Instagram , Github , Mail} from 'lucide-react'
 
-export const description:string = "Since 4 years interest with Software Development. Last 3 years of this passed with Web Development. I Graduated in highschool IT and Web Design. I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota GmbH. I worked as Frontend Develoepr 9 months. In this period, i contribute many projects and i made a presentation to other developers about “Writing Test in Frontend”. Currently i continue to develop my own web projects and working at Carbon Interaktif as Frontend Developer."
+export const description = "Since 4 years interest with Software Development. Last 3 years of this passed with Web Development. I Graduated in highschool IT and Web Design. I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota GmbH. I worked as Frontend Develoepr 9 months. In this period, i contribute many projects and i made a presentation to other developers about “Writing Test in Frontend”. Currently i continue to develop my own web projects and working at Carbon Interaktif as Frontend Developer."
 
-export const socialMediaLinks:object[] = [
+export const socialMediaLinks = [
   {
     name: 'Github',
     url: 'https://www.github.com/tutkuofnight',
@@ -25,7 +25,7 @@ export const socialMediaLinks:object[] = [
   }
 ]
 
-export const experiences:object[] = [
+export const experiences = [
   {
     companyName: 'Carbon Interaktif',
     position: 'Frontend Developer',
@@ -52,7 +52,7 @@ export const experiences:object[] = [
   },
 ]
 
-export const projects:object[] = [
+export const projects = [
   {
     name: 'FitProgram',
     description: "Create your fitness workout and diet program as public or private. View other people's public training and diet programs.",

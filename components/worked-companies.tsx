@@ -31,8 +31,8 @@ export default function() {
 
   return (
     <div className="flex flex-wrap items-baseline gap-3">
-      {companies.map(company => (
-        <Image className="rounded" src={"/companies/" + company.image} width={140} height={70} alt={company.name} />
+      {companies.map((company,key) => (
+        <Image key={key} className="rounded" src={"/companies/" + company.image} width={140} height={70} alt={company.name} />
       ))}
     </div>
   )

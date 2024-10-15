@@ -33,9 +33,9 @@ export default function () {
   ]
 
   return (
-    <div className="flex justify-evenly mt-9">
-      {socials.map(media => (
-        <a href={media.link}>
+    <div className="flex justify-evenly desktop:gap-6 mt-9">
+      {socials.map((media, key) => (
+        <a key={key} href={media.link}>
           {media.icon}
         </a>
       ))}

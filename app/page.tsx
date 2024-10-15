@@ -1,31 +1,31 @@
 import Image from "next/image"
 import TechStack from "@/components/tech-stack"
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import WorkedCompanies from "@/components/worked-companies"
-import socialMedia from "@/components/social-media"
 import SocialMedia from "@/components/social-media"
+import Background from "@/components/background"
 
 export default async function Home() {
   const techstack: string = await TechStack()
   return (
     <div className="w-full flex justify-center items-center h-screen">
-      <main className="w-full md:w-1/2">
-        <div className="flex flex-col md:flex-row justify-center items-center md:justify-between gap-10">
-          <div>
+      <main className="w-1/2 desktop:w-full">
+        <div className="flex flex-row desktop:flex-col desktop:items-center gap-10">
+          <div className="desktop:flex desktop:items-center desktop:flex-col">
             <Image src="/askeladd.jpeg" width={300} height={300} className="rounded" draggable={false} alt="Tutku Ucan" />
             <SocialMedia />
           </div>
-          <aside className="w-full xl:w-[500px] px-40 md:px-0">
-            <h1 className="text-3xl font-bold">Tutku Ucan</h1>
-            <small className="text-base">full-stack developer ~ streamer ~ freelancer</small>
+          <aside className="phone:w-full phone:px-10 w-[500px]">
+            <h1 className="text-3xl font-bold phone:text-center">Tutku Ucan</h1>
+            <div className="text-base phone:text-sm phone:text-center">full-stack developer ~ streamer ~ freelancer</div>
             <Tabs defaultValue="about" className="w-full">
               {/* <TabsList>
                 <TabsTrigger value="about">About Me</TabsTrigger>
@@ -71,18 +71,7 @@ export default async function Home() {
           </aside>
         </div>
       </main>
-      <div
-        className="w-[1000px] h-[200px] rounded-lg absolute -z-[1] opacity-100 blur-3xl top-[200px] -left-40 rotate-45 opacity-75"
-        style={{
-          background: `linear-gradient(to right, #325650, #0a1c1f)`
-        }}
-      ></div>
-            <div
-        className="w-[500px] h-[200px] rounded-lg absolute -z-[1] opacity-100 blur-3xl -top-10 left-[200px] rotate-45 opacity-70"
-        style={{
-          background: `linear-gradient(to right, #325650, #0a1c1f)`
-        }}
-      ></div>
+      <Background />
     </div>
   );
 }

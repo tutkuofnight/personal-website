@@ -1,64 +1,88 @@
-import {description , experiences , projects , socialMediaLinks} from './content'
-export default function Home() {
+import Image from "next/image"
+import TechStack from "@/components/tech-stack"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import WorkedCompanies from "@/components/worked-companies"
+import socialMedia from "@/components/social-media"
+import SocialMedia from "@/components/social-media"
+
+export default async function Home() {
+  const techstack: string = await TechStack()
   return (
-    <div className="min-h-screen">
-      <div className="background"></div>
-      
-      <main className="w-[85%] lg:w-[70%] py-20 mx-auto">
-        <header>
-          <small className="text-xl text-slate-300">Heyo, I am</small>
-          <h1 className="text-4xl font-bold">Tutku Uçan</h1>
-        </header>
-        <section>
-          <p>{description}</p>
-          <div className='flex flex-wrap gap-3 my-5'>
-            {socialMediaLinks.map((media , index) => (
-              <a key={index} href={media.url} target='_blank' className='flex items-center gap-3 p-2 bg-white text-black font-bold'>
-                {media.icon}
-                <span>{media.name}</span>
-              </a>
-            ))}
+    <div className="w-full flex justify-center items-center h-screen">
+      <main className="w-full md:w-1/2">
+        <div className="flex flex-col md:flex-row justify-center items-center md:justify-between gap-10">
+          <div>
+            <Image src="/askeladd.jpeg" width={300} height={300} className="rounded" draggable={false} alt="Tutku Ucan" />
+            <SocialMedia />
           </div>
-        </section>
-        <section>
-          <h1 className='text-4xl font-bold'>Experiences</h1>
-          <div className='my-5'>
-            {experiences.map((job , index) => (
-              <div key={index} className='border-l-2 p-5 relative before:box-content before:absolute before:w-3 before:h-3 before:bg-white before:left-[-7px] before:top-[25px] first:before:bg-red-400 first:before:w-4 first:before:h-4 first:before:left-[-9px] first:before:top-[26px]'>
-                <h1 className='text-xl'>{job.position}</h1>
-                <div className='flex gap-3 items-center'>
-                  <h3 className='text-md text-slate-300 sm:pr-2 sm:border-r-2'>{job.companyName}</h3>
-                  <small>{job.date.started} - {job.date.ended}</small>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section>
-          <h1 className='text-4xl font-bold'>Projects</h1>
-          <div className='my-5'>
-            {projects.map((project , index) => (
-              <div key={index}>
-                <h1 className='text-xl'>{project.name}</h1>
-                <div className='flex gap-3 items-center text-slate-200'>
-                  <p>{project.description}</p>
-                </div>
-                <div>
-                  {Object.entries(project.techStack).map((stack , index) => (
-                    <div key={index} className='my-2'>
-                      {stack[0]}
-                      <div className='my-1'>
-                        {stack[1].join(', ')}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+          <aside className="w-full xl:w-[500px] px-40 md:px-0">
+            <h1 className="text-3xl font-bold">Tutku Ucan</h1>
+            <small className="text-base">full-stack developer ~ streamer ~ freelancer</small>
+            <Tabs defaultValue="about" className="w-full">
+              {/* <TabsList>
+                <TabsTrigger value="about">About Me</TabsTrigger>
+                <TabsTrigger value="other">Other</TabsTrigger>
+              </TabsList> */}
+              <TabsContent value="about">
+                <Accordion type="single" collapsible className="w-100">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Who I Am?</AccordionTrigger>
+                    <AccordionContent>
+                      Since 4 years interest with Software Development.
+                      Last 3 years of this passed with Web Development.
+                      I Graduated in highschool IT and Web Design.
+                      I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota GmbH.
+                      I worked as Frontend Develoepr 9 months.
+                      In this period, i contribute many projects and i made a presentation to other developers about “Writing Test in Frontend”.
+                      Currently i continue to develop my own web projects and working at Carbon Interaktif as Frontend Developer.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                <Accordion type="single" collapsible className="w-100">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Worked Companies</AccordionTrigger>
+                    <AccordionContent>
+                      <WorkedCompanies />
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                <Accordion type="single" collapsible className="w-100">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>Tech Stack</AccordionTrigger>
+                    <AccordionContent>
+                      <ScrollArea>
+                        <div className="mb-3 w-[300px]" dangerouslySetInnerHTML={{ __html: techstack }}></div>
+                        <ScrollBar orientation="horizontal" />
+                      </ScrollArea>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </TabsContent>
+              <TabsContent value="other"></TabsContent>
+            </Tabs>
+          </aside>
+        </div>
       </main>
-    
+      <div
+        className="w-[1000px] h-[200px] rounded-lg absolute -z-[1] opacity-100 blur-3xl top-[200px] -left-40 rotate-45 opacity-75"
+        style={{
+          background: `linear-gradient(to right, #325650, #0a1c1f)`
+        }}
+      ></div>
+            <div
+        className="w-[500px] h-[200px] rounded-lg absolute -z-[1] opacity-100 blur-3xl -top-10 left-[200px] rotate-45 opacity-70"
+        style={{
+          background: `linear-gradient(to right, #325650, #0a1c1f)`
+        }}
+      ></div>
     </div>
-  )
+  );
 }

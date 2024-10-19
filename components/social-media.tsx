@@ -12,22 +12,22 @@ export default function () {
   const socials: Social[] = [
     {
       name: "Github",
-      link: "#",
+      link: "https://github.com/tutkuofnight",
       icon: <Github />,
     },
     {
       name: "Twitch",
-      link: "#",
+      link: "https://twitch.tv/tutkuofnight",
       icon: <Twitch />
     },
     {
       name: "Linkedin",
-      link: "#",
+      link: "https://www.linkedin.com/in/tutkuucan",
       icon: <Linkedin />
     },
     {
       name: "Instagram",
-      link: "#",
+      link: "https://instagram.com/tutkuofnight",
       icon: <Instagram />
     },
   ]

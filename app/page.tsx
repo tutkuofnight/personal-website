@@ -36,13 +36,15 @@ export default async function Home() {
                   <AccordionItem value="item-1">
                     <AccordionTrigger>Who I Am?</AccordionTrigger>
                     <AccordionContent>
-                      Since 4 years interest with Software Development.
-                      Last 3 years of this passed with Web Development.
+                      Hi! This is Tutku.
+                      Since 5 years interest with Software Development.
+                      Last 4 years of this passed with Web Development.
                       I Graduated in highschool IT and Web Design.
                       I was student at Tekirdag Namık Kemal University Computer Programming but i left after getting job from eQuota GmbH.
-                      I worked as Frontend Develoepr 9 months.
+                      I worked as Frontend Develoepr 9 months there.
                       In this period, i contribute many projects and i made a presentation to other developers about “Writing Test in Frontend”.
-                      Currently i continue to develop my own web projects and working at Carbon Interaktif as Frontend Developer.
+                      Later, I worked as a Frontend and Full-Stack Developer in several companies.
+                      Currently i am developing my own projects, learning go and trying to make myself better again.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

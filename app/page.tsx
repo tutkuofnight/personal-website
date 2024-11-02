@@ -17,7 +17,7 @@ export default async function Home() {
   const techstack: string = await TechStack()
   return (
     <div className="w-full flex justify-center items-center h-screen">
-      <main className="w-1/2 desktop:w-full">
+      <main>
         <div className="flex flex-row desktop:flex-col desktop:items-center gap-10">
           <div className="desktop:flex desktop:items-center desktop:flex-col">
             <Image src="/askeladd.jpeg" width={300} height={300} className="rounded" draggable={false} alt="Tutku Ucan" />
